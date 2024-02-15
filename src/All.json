@@ -1,18 +1,16 @@
 [
     {
-      "id": "test1",
-      "backgroundImg": "../gif/puzzle.gif",
-      "cardImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/87F1DCF36049558159913ADFD18A800DE1121771540033EC3A7651B8FE154CEB/scale?width=400&aspectRatio=1.78&format=jpeg",
+      "id": "12Chairs1971",
+      "backgroundImg": "http://94.241.168.136/films/12Chairs1971/trailer.gif",
+      "cardImg": "http://94.241.168.136/films/12Chairs1971/poster.jpg",
       "description": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home.",
       "subTitle": "2015 • 1h 35m • Coming of Age, Family, Animation",
       "title": "Inside Out",
-      "titleImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5C647DF3FFBFA343CFEA84AC715148F25F9E86F398B408010CC403E7654FB908/scale?width=1440&aspectRatio=1.78",
+      "titleImg": "http://94.241.168.136/films/12Chairs1971/logo.png",
       "type": "films",
       "films": "https://www.youtube.com/watch?v=RZuynzRR81g",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "puzzle"
-      
-
      },{
         "id": "test12",
         "backgroundImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4E9E81584305009D6385F6178D4B6930E97CD6EC4A3B53C818400DEF778FFA9A/scale?width=1440&aspectRatio=1.78&format=jpeg",
@@ -21,9 +19,20 @@
         "subTitle": "2006 • 1h 19m • Family, Comedy, Kids",
         "title": "A tail of two kitties",
         "titleImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/50B933E83609BEEFEDFA177A6D96DBFA7804C14F70A0B5AB314E892E65498ACF/scale?width=1440&aspectRatio=1.78",
-        "type": "films",
+        "type": "series",
         "films": "https://www.youtube.com/watch?v=RZuynzRR81g",
         "trailer": "https://www.youtube.com/watch?v=n-AGp9iI21o",
         "name": "test"
-     }
+     },{
+      "id": "test14",
+   "backgroundImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FA1548A6B82C9991B1D38DF251A388FEA2483904510FBC73E150F67F7BDE38C0/scale?width=1440&aspectRatio=1.78&format=jpeg",
+   "cardImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0ECD36DD35658155915685271440833C29ED87E788CF8AE111AA6BCA6B939C37/scale?width=400&aspectRatio=1.78&format=jpeg",
+   "description": "When the kingdom's most wanted bandit is taken hostage by Rapunzel — a teen with 70 feet of golden hair who's looking to escape the tower where she's been locked away for years — the unlikely duo sets off on a hair-raising escapade.",
+   "subTitle": "2010 • 1h 40m • Family, Fantasy, Animation, Action-Adventure, Musical",
+   "title": "Tangled",
+   "titleImg": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F70235E3463A6F246EB462ED5379F9D41D6318E80098BD40900E7AFC1C7D932D/scale?width=1440&aspectRatio=1.78",
+   "type": "cartoons",
+   "films": "https://www.youtube.com/watch?v=RZuynzRR81g",
+   "trailer": "https://www.youtube.com/watch?v=n-AGp9iI21o"
+   }
 ]

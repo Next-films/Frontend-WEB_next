@@ -6,10 +6,10 @@ import db from "../firebase";
 import { setMovies } from "../features/movie/movieSlice";
 
 
-import disneyAllFilms from '../All.json'
-import disneyAllSeries from '../All.json'
+
 import disneyAllCartoons from '../All.json'
-import ListAllFilm from "./ListAllFilm";
+
+import ListAllCartoons from "./ListAllCartoons";
 
 
 
@@ -25,7 +25,7 @@ const Films = (props) => {
     dispatch(
       setMovies({
  
-        films: disneyAllFilms.filter(film => film.type === 'films'),
+        cartoons: disneyAllCartoons.filter(series => series.type === 'cartoons'),
       })
     );
 
@@ -34,7 +34,7 @@ const Films = (props) => {
   return (
     <Container>
       <ImgSlider />    
-    <ListAllFilm />
+    <ListAllCartoons />
     </Container>
   );
 };

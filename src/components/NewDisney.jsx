@@ -21,7 +21,7 @@ const NewDisney = (props) => {
               </Link>
             </Wrap>
           ))}
-          <Link to="/allfilms">
+          <Link to="/allseries">
           <Wrap>
             <img src="/images/AllSeries.png" alt="" />
         <video autoPlay={true} loop={true} playsInline={true}>

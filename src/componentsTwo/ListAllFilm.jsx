@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectFilms } from "../features/movie/movieSliceAll";
+import { selectFilms } from "../features/movie/movieSlice";
 
 
 const ListAllFilm = () => {

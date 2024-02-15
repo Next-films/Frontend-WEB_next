@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import disneyFilms from '../disneyPlusMoviesData'; // Путь к файлу с данными фильмов
-
+import disneyFilms from '../disneyPlusMoviesData';
+import All from '../All';
 
 const Detail = () => {
   const { id } = useParams();
@@ -11,7 +11,10 @@ const Detail = () => {
 
   useEffect(() => {
     if (id) {
-      setDetailData(disneyFilms.find(film => film.id === id));
+      // Объединяем данные из обоих файлов в один массив
+      const combinedData = [...disneyFilms, ...All];
+      // Ищем фильм по id в объединенных данных
+      setDetailData(combinedData.find(film => film.id === id));
     }
 
     return () => setDetailData({});

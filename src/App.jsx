@@ -5,7 +5,10 @@ import Header from "./components/Header";
 import Home from './components/Home';
 import Detail from "./components/Detail";
 import AllFilms from "./componentsTwo/AllFilms";
+import AllSeries from "./componentsTwo/AllSeries";
+import AllCartoons from "./componentsTwo/AllCartoons";
 import SearchResults from './components/IssuedRequest'
+
 
 
 const App = () => {
@@ -17,6 +20,8 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/allfilms" element={<AllFilms />} />
+        <Route path="/allseries" element={<AllSeries />} />
+        <Route path="/allcartoons" element={<AllCartoons />} />
         <Route path="/results" element={<SearchResults />} />
       </Routes>
     </BrowserRouter>

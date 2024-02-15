@@ -1,35 +1,29 @@
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectOriginal } from "../features/movie/movieSlice";
+import { selectСartoons } from "../features/movie/movieSlice";
 
-const Originals = (props) => {
-  const movies = useSelector(selectOriginal);
-  console.log(movies, ":🛢️");
-  
+
+const ListAllFilm = () => {
+  const movies = useSelector(selectСartoons);
 
   return (
     <Container>
-      <h4>Recommended for You</h4>
+      <h4>Recommended </h4>
+
       <Content>
-        {movies &&
-          movies.map((movie, key) => (
-            <Wrap key={key}>
-              {movie.id}
-              <Link to={`/detail/` + movie.id}>
-                <img src={movie.cardImg} alt={movie.title} />
-              </Link>
-            </Wrap>
-          ))}
-          <Link to="/allcartoons">
-          <Wrap>
-            <img src="/images/AllCartoons.png" alt="" />
-        <video autoPlay={true} loop={true} playsInline={true}>
-          <source src="/videos/1564676115-marvel.mp4" type="video/mp4" />
-        </video>
-          </Wrap>
-          </Link>
-      </Content>
+  {movies &&
+    movies.map((movie, key) => (
+      <Wrap key={key}>
+        <Link to={`/detail/` + movie.id}>
+          <img src={movie.cardImg} alt={movie.title} />
+        </Link>
+      </Wrap>
+    ))}
+
+</Content>
+
     </Container>
   );
 };
@@ -37,6 +31,20 @@ const Originals = (props) => {
 const Container = styled.div`
   padding: 0 0 26px;
   color: rgb(255, 255, 255);
+`;
+
+const Button = styled.button`
+  border-radius: 100px;
+  padding: 8px 12px;
+  background-color: #424d64aa;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  left: 50%;
+  position: absolute;
+  margin-top: 20px;
+  transform: translate(-50%, -50%);
 `;
 
 const Content = styled.div`
@@ -74,26 +82,12 @@ const Wrap = styled.div`
     top: 0;
   }
 
-  video {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    opacity: 0;
-    z-index: 0;
-  }
-
   &:hover {
     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
       rgb(0 0 0 / 72%) 0px 30px 22px -10px;
-
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
-
-    video {
-      opacity: 1;
-    }
   }
-`;
+};`
 
-export default Originals;
+export default ListAllFilm;
