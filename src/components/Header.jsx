@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { auth, provider } from "../firebase";
 import { setUserLoginDetails, setSignOutState } from "../features/user/userSlice";
-
-// Предполагается, что All.json находится в той же директории, что и этот файл
 import allData from "../All.json";
 
 const Header = (props) => {
@@ -60,10 +58,9 @@ const Header = (props) => {
 
   const handleSearch = () => {
     const filteredResults = allData.filter((item) =>
-      item.name.toLowerCase().includes(textInput.toLowerCase())
+      typeof item.name === 'string' && item.name.toLowerCase().includes(textInput.toLowerCase())
     );
- 
-    history('/results', {state: {results: filteredResults}})
+    history('/results', {state: {results: filteredResults}});
   };
 
   return (
