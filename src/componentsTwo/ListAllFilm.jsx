@@ -1,29 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectFilms } from "../features/movie/movieSlice";
 
-
 const ListAllFilm = () => {
   const movies = useSelector(selectFilms);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
+  const isCategorySelected = (category) => {
+    return selectedCategories.includes(category);
+  };
+
+  const toggleCategory = (category) => {
+    if (isCategorySelected(category)) {
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
+  };
+
+  const filterMoviesByCategories = () => {
+    if (!movies || movies.length === 0) {
+      return [];
+    }
+    if (selectedCategories.length === 0) {
+      return movies;
+    }
+    return movies.filter((movie) => selectedCategories.includes(movie.filtr));
+  };
+
+  const sortedMovies = [...filterMoviesByCategories()].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB - dateA; // сортировка по убыванию даты
+  });
 
   return (
     <Container>
       <h4>Recommended for You</h4>
+      <Button onClick={() => setSelectedCategories([])}>All</Button>
+      <Button
+        onClick={() => toggleCategory("comedy")}
+        selected={isCategorySelected("comedy")}
+      >
+        Comedy
+      </Button>
+      <Button
+        onClick={() => toggleCategory("drama")}
+        selected={isCategorySelected("drama")}
+      >
+        Drama
+      </Button>
 
       <Content>
-  {movies &&
-    movies.map((movie, key) => (
-      <Wrap key={key}>
-        <Link to={`/detail/` + movie.id}>
-          <img src={movie.cardImg} alt={movie.title} />
-        </Link>
-      </Wrap>
-    ))}
-
-</Content>
-
+        {sortedMovies && sortedMovies.map((movie, key) => (
+          <Wrap key={key}>
+            <Link to={`/detail/` + movie.id}>
+              <img src={movie.cardImg} alt={movie.title} />
+            </Link>
+          </Wrap>
+        ))}
+      </Content>
     </Container>
   );
 };
@@ -36,15 +74,12 @@ const Container = styled.div`
 const Button = styled.button`
   border-radius: 100px;
   padding: 8px 12px;
-  background-color: #424d64aa;
+  background-color: ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")};
   color: #ffffff;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  left: 50%;
-  position: absolute;
-  margin-top: 20px;
-  transform: translate(-50%, -50%);
+  margin-right: 10px;
 `;
 
 const Content = styled.div`
@@ -88,6 +123,6 @@ const Wrap = styled.div`
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
   }
-};`
+`;
 
 export default ListAllFilm;

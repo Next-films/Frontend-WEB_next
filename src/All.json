@@ -9,7 +9,9 @@
    "type": "films",
    "films": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "PobegIzPritoria" 
+   "name": "PobegIzPritoria",
+   "filtr": "comedy",
+   "date": "01/01/2020"
 },{
    "id": "PoSoobrazheniuSovesti",
    "backgroundImg": "http://94.241.168.136/films/PoSoobrazheniuSovesti/trailer.gif",
@@ -21,7 +23,9 @@
    "type": "films",
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "PoSoobrazheniuSovesti" 
+   "name": "PoSoobrazheniuSovesti",
+   "filtr": "drama",
+   "date": "01/01/2021"
 },{
    "id": "PoSemeynimObstoyatelstvam1978",
    "backgroundImg": "http://94.241.168.136/films/PoSemeynimObstoyatelstvam1978/trailer.gif",
@@ -33,7 +37,8 @@
    "type": "films",
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "PoSemeynimObstoyatelstvam1978" 
+   "name": "PoSemeynimObstoyatelstvam1978",
+   "date": "01/01/2022"
 },{
    "id": "PiratesOfTheCaribbeanDeadMan'sChest2006",
    "backgroundImg": "http://94.241.168.136/films/PiratesOfTheCaribbeanDeadMan'sChest2006/trailer.gif",
@@ -45,7 +50,8 @@
    "type": "films",
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "PiratesOfTheCaribbeanDeadMan'sChest2006" 
+   "name": "PiratesOfTheCaribbeanDeadMan'sChest2006" ,
+   "date": "01/01/2023"
 },{
    "id": "Patrol2012",
    "backgroundImg": "http://94.241.168.136/films/Patrol2012/trailer.gif",
@@ -141,7 +147,7 @@
    "type": "films",
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "Matrix" 
+   "name": "Matrix"
 },{
    "id": "Leon1994",
    "backgroundImg": "http://94.241.168.136/films/Leon1994/trailer.gif",
@@ -153,7 +159,7 @@
    "type": "films",
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "Leon1994" 
+   "name": "Leon1994"
 },{
    "id": "JestokyRomans1984",
    "backgroundImg": "http://94.241.168.136/films/JestokyRomans1984/trailer.gif",

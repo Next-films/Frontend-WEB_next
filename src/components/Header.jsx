@@ -66,7 +66,7 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo href="/home">
-        <img src="/images/logo.svg" alt="HOME" />
+        <img src="/images/icon1-next.png" alt="HOME" />
       </Logo>
       <NavMenu>
         <NavItem href="/movies">
@@ -110,7 +110,7 @@ const Nav = styled.nav`
 const Logo = styled.a`
   padding: 0;
   width: 80px;
-  margin-top: 4px;
+  margin-top: -45px;
   max-height: 70px;
   font-size: 0;
   display: inline-block;
