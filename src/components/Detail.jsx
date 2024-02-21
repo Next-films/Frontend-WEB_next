@@ -59,6 +59,11 @@ const Detail = () => {
               <img src="/images/group-icon.png" alt="" />
             </div>
           </GroupWatch>
+          <GroupWatch>
+            <div>
+              <img src="/images/info-icon.svg" alt="" />
+            </div>
+          </GroupWatch>
         </Controls>
         <SubTitle>{detailData.subTitle}</SubTitle>
         <Description>{detailData.description}</Description>
