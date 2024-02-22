@@ -7,6 +7,7 @@ import { selectFilms } from "../features/movie/movieSlice";
 const ListAllFilm = () => {
   const movies = useSelector(selectFilms);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [randomMovie, setRandomMovie] = useState(null); // Состояние для хранения случайного фильма
 
   const isCategorySelected = (category) => {
     return selectedCategories.includes(category);
@@ -41,31 +42,50 @@ const ListAllFilm = () => {
     return dateB - dateA; // сортировка по убыванию даты
   });
 
+  // Функция для выбора случайного фильма
+  const chooseRandomMovie = () => {
+    const randomIndex = Math.floor(Math.random() * sortedMovies.length);
+    setRandomMovie(sortedMovies[randomIndex]);
+  };
+
   return (
     <Container>
-      <h4>Recommended for You</h4>
-      <Button onClick={() => setSelectedCategories([])}>All</Button>
-      <Button
-        onClick={() => toggleCategory("comedy")}
-        selected={isCategorySelected("comedy")}
-      >
-        Comedy
-      </Button>
-      <Button
-        onClick={() => toggleCategory("drama")}
-        selected={isCategorySelected("drama")}
-      >
-        Drama
-      </Button>
+      <ButtonContainer>
+        <ButtonContainerInner>
+          <Button onClick={() => {setSelectedCategories([]); setRandomMovie(null);}}>All Films</Button>
+          <Button
+            onClick={() => toggleCategory("comedy")}
+            selected={isCategorySelected("comedy")}
+          >
+            Comedy
+          </Button>
+          <Button        
+            onClick={() => toggleCategory("drama")}
+            selected={isCategorySelected("drama")}
+          >
+            Drama
+          </Button>
+          {/* Кнопка "Рандом" */}
+          <Button onClick={chooseRandomMovie}>Random</Button>
+        </ButtonContainerInner>
+      </ButtonContainer>
 
       <Content>
-        {sortedMovies && sortedMovies.map((movie, key) => (
-          <Wrap key={key}>
-            <Link to={`/detail/${movie.id}`}>
-              <img src={movie.cardImg} alt={movie.title} />
+        {randomMovie ? ( // Проверяем, есть ли выбранный случайный фильм
+          <Wrap>
+            <Link to={`/detail/${randomMovie.id}`}>
+              <img src={randomMovie.cardImg} alt={randomMovie.title} />
             </Link>
           </Wrap>
-        ))}
+        ) : (
+          sortedMovies.map((movie, key) => (
+            <Wrap key={key}>
+              <Link to={`/detail/${movie.id}`}>
+                <img src={movie.cardImg} alt={movie.title} />
+              </Link>
+            </Wrap>
+          ))
+        )}
       </Content>
     </Container>
   );
@@ -74,6 +94,18 @@ const ListAllFilm = () => {
 const Container = styled.div`
   padding: 0 0 26px;
   color: rgb(255, 255, 255);
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  margin-bottom: 10px; /* Добавлен отступ снизу */
+`;
+
+const ButtonContainerInner = styled.div`
+  display: flex;
+  margin: 10px; /* Добавлен отступ сверху и снизу */
+  margin-top: 40px;
 `;
 
 const Button = styled.button`
@@ -87,6 +119,12 @@ const Button = styled.button`
   margin-right: 10px;
   border: 2px solid ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")}; /* Added border */
   transition: background-color 0.3s, border-color 0.3s; /* Added transition for smooth effect */
+
+  /* Добавляем стили для кнопки "Рандом" */
+  &.random {
+    background-color: #fca311;
+    border-color: #fca311;
+  }
 `;
 
 

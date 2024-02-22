@@ -63,6 +63,12 @@ const Header = (props) => {
     history('/results', {state: {results: filteredResults}});
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   return (
     <Nav>
       <Logo href="/home">
@@ -84,6 +90,7 @@ const Header = (props) => {
           placeholder="Поиск..."
           value={textInput}
           onChange={handleTextChange}
+          onKeyPress={handleKeyPress} // Обработчик события нажатия клавиши
         />
         <SearchButton onClick={handleSearch} />
       </SearchContainer>
@@ -92,20 +99,7 @@ const Header = (props) => {
   );
 };
 
-const Nav = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  background-color: #090b13;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 36px;
-  letter-spacing: 16px;
-  z-index: 3;
-`;
+
 
 const Logo = styled.a`
   padding: 0;
@@ -121,6 +115,29 @@ const Logo = styled.a`
   }
 `;
 
+const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #090b13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+  letter-spacing: 16px;
+  z-index: 3;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 10px;
+  }
+`;
+
 const NavMenu = styled.div`
   align-items: center;
   display: flex;
@@ -132,7 +149,12 @@ const NavMenu = styled.div`
   position: relative;
   margin-right: auto;
   margin-left: 25px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
+
 
 const NavItem = styled.a`
   display: flex;
