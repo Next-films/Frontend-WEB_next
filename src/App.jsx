@@ -7,7 +7,9 @@ import Detail from "./components/Detail";
 import AllFilms from "./componentsTwo/AllFilms";
 import AllSeries from "./componentsTwo/AllSeries";
 import AllCartoons from "./componentsTwo/AllCartoons";
-import SearchResults from './components/IssuedRequest'
+import SearchResults from './components/IssuedRequest';
+import DetailSeries from "./componentsTwo/DetailSeries";
+
 
 
 
@@ -21,6 +23,7 @@ const App = () => {
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/allfilms" element={<AllFilms />} />
         <Route path="/allseries" element={<AllSeries />} />
+        <Route path="/detailseries/:id" element={<DetailSeries />} />
         <Route path="/allcartoons" element={<AllCartoons />} />
         <Route path="/results" element={<SearchResults />} />
       </Routes>

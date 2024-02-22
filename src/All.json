@@ -193,8 +193,8 @@
    "subTitle": "2015 • 1h 35m • Coming of Age, Family, Animation",
    "title": "Inside Out",
    "titleImg": "http://94.241.168.136/films/HomeAlone/logo.png",
-   "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "type": "series",
+   "films": ["../public/videos/1564674844-disney.mp4", "../public/videos/1564676115-marvel.mp4","../public/videos/1564674844-disney.mp4","../public/videos/1564674844-disney.mp4","../public/videos/1564674844-disney.mp4"],
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "HomeAlone" 
 },{
