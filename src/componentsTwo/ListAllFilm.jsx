@@ -27,7 +27,12 @@ const ListAllFilm = () => {
     if (selectedCategories.length === 0) {
       return movies;
     }
-    return movies.filter((movie) => selectedCategories.includes(movie.filtr));
+    return movies.filter((movie) => {
+      if (!movie.filtr || !Array.isArray(movie.filtr)) {
+        return false;
+      }
+      return selectedCategories.every(category => movie.filtr.includes(category));
+    });
   };
 
   const sortedMovies = [...filterMoviesByCategories()].sort((a, b) => {
@@ -56,7 +61,7 @@ const ListAllFilm = () => {
       <Content>
         {sortedMovies && sortedMovies.map((movie, key) => (
           <Wrap key={key}>
-            <Link to={`/detail/` + movie.id}>
+            <Link to={`/detail/${movie.id}`}>
               <img src={movie.cardImg} alt={movie.title} />
             </Link>
           </Wrap>
@@ -73,14 +78,17 @@ const Container = styled.div`
 
 const Button = styled.button`
   border-radius: 100px;
-  padding: 8px 12px;
+  padding: 6px 10px; /* Adjusted padding */
   background-color: ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")};
   color: #ffffff;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   margin-right: 10px;
+  border: 2px solid ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")}; /* Added border */
+  transition: background-color 0.3s, border-color 0.3s; /* Added transition for smooth effect */
 `;
+
 
 const Content = styled.div`
   display: grid;

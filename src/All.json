@@ -10,7 +10,7 @@
    "films": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "PobegIzPritoria",
-   "filtr": "comedy",
+   "filtr": ["comedy", "drama"],
    "date": "01/01/2020"
 },{
    "id": "PoSoobrazheniuSovesti",
@@ -24,7 +24,7 @@
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "PoSoobrazheniuSovesti",
-   "filtr": "drama",
+   "filtr": ["drama"],
    "date": "01/01/2021"
 },{
    "id": "PoSemeynimObstoyatelstvam1978",
@@ -63,7 +63,8 @@
    "type": "films",
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "Patrol2012" 
+   "name": "Patrol2012" ,
+   "date": "02/02/2024"
 },{
    "id": "OstrovProclytih",
    "backgroundImg": "http://94.241.168.136/films/OstrovProclytih/trailer.gif",
