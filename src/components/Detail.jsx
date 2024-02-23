@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import disneyFilms from '../disneyPlusMoviesData';
@@ -8,30 +8,74 @@ const Detail = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const [savedPosition, setSavedPosition] = useState(null);
+  const [message, setMessage] = useState(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (id) {
-      // Объединяем данные из обоих файлов в один массив
       const combinedData = [...disneyFilms, ...All];
-      // Ищем фильм по id в объединенных данных
-      setDetailData(combinedData.find(film => film.id === id));
+      const foundFilm = combinedData.find(film => film.id === id);
+      setDetailData(foundFilm);
+
+      const savedPosition = localStorage.getItem(`video_position_${id}`);
+      if (savedPosition) {
+        setSavedPosition(JSON.parse(savedPosition));
+        setMessage(`Вы прервали просмотр "${foundFilm.title}" на ${formatTime(JSON.parse(savedPosition))}`);
+      }
     }
 
-    return () => setDetailData({});
+    return () => {
+      setDetailData({});
+      if (detailData.id && savedPosition !== null) {
+        localStorage.setItem(`video_position_${detailData.id}`, JSON.stringify(savedPosition));
+      }
+    };
   }, [id]);
 
   const openModal = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
+  const closeModal = () => {
+    setSavedPosition(null);
+    setShowModal(false);
+    if (detailData.title && savedPosition !== null) {
+      setMessage(`Вы прервали просмотр "${detailData.title}" на ${formatTime(savedPosition)}`);
+    }
+  };
+
+  const continueWatching = () => {
+    setShowModal(true);
+    videoRef.current.currentTime = savedPosition;
+    videoRef.current.play();
+  };
 
   const films = detailData.films;
   const trailer = detailData.trailer;
 
   const ClickTrailer = () => {
+    setSavedPosition(null);
     window.open(trailer, '_blank');
+  };
+
+  const formatTime = (timeInSeconds) => {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
   return (
     <Container>
+      {message && <Message>{message}<ContinueButton onClick={continueWatching}>Продолжить просмотр</ContinueButton></Message>}
+      {showModal && (
+        <Modal>
+          <CloseModalButton onClick={closeModal}>X</CloseModalButton>
+          <VideoWrapper>
+            <video ref={videoRef} controls onTimeUpdate={(e) => setSavedPosition(e.target.currentTime)}>
+              <source src={films} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </VideoWrapper>
+        </Modal>
+      )}
       <Background>
         <img alt={detailData.title} src={detailData.backgroundImg} />
       </Background>
@@ -64,18 +108,6 @@ const Detail = () => {
         <SubTitle>{detailData.subTitle}</SubTitle>
         <Description>{detailData.description}</Description>
       </ContentMeta>
-
-      {showModal && (
-        <Modal>
-          <CloseModalButton onClick={closeModal}>X</CloseModalButton>
-          <VideoWrapper>
-            <video controls>
-              <source src={films} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </VideoWrapper>
-        </Modal>
-      )}
     </Container>
   );
 };
@@ -279,7 +311,33 @@ const CloseModalButton = styled.button`
 const VideoWrapper = styled.div`
   width: 80%;
   max-width: 800px;
-  text-align: center; /* Центрирование видео */
+  text-align: center; 
+`;
+
+const Message = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+`;
+
+const ContinueButton = styled.button`
+  background-color: #f9f9f9;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e2e2e2;
+  }
 `;
 
 export default Detail;
