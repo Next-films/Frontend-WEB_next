@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -6,7 +6,6 @@ import { selectOriginal } from "../features/movie/movieSlice";
 
 const Originals = (props) => {
   const movies = useSelector(selectOriginal);
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Container>
@@ -22,17 +21,11 @@ const Originals = (props) => {
             </Wrap>
           ))}
         <Link to="/allcartoons">
-          <Wrap
-            className="larger-wrap"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <Wrap className="larger-wrap">
             <img src="http://94.241.168.136/default/images/AllCartoons.png" alt="" />
-            {isHovered && (
-              <video autoPlay={!isHovered} loop={true} playsInline={true}>
-                <source src="http://94.241.168.136/default/video/AllCartoons.mp4" type="video/mp4" />
-              </video>
-            )}
+            <video autoPlay loop playsInline>
+              <source src="http://94.241.168.136/default/video/AllCartoons.mp4" type="video/mp4" />
+            </video>
           </Wrap>
         </Link>
       </Content>

@@ -8,6 +8,9 @@ const NewDisney = (props) => {
   const movies = useSelector(selectNewDisney);
   const [isHovered, setIsHovered] = useState(false);
 
+  // Устанавливаем состояние видимости видео в true всегда
+  const [videoVisible, setVideoVisible] = useState(true);
+
   return (
     <Container>
       <h4>Series</h4>
@@ -28,7 +31,8 @@ const NewDisney = (props) => {
             onMouseLeave={() => setIsHovered(false)}
           >
             <img src="http://94.241.168.136/default/images/AllSeries.png" alt="" />
-            {isHovered && (
+            {/* Используем videoVisible для управления видимостью видео */}
+            {videoVisible && (
               <video autoPlay={true} loop={true} playsInline={true}>
                 <source src="http://94.241.168.136/default/video/AllSeries.mp4" type="video/mp4" />
               </video>

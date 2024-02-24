@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectRecommend } from "../features/movie/movieSlice";
 
-const Recommends = (props) => {
+const Recommends = () => {
   const movies = useSelector(selectRecommend);
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Container>
@@ -22,21 +21,15 @@ const Recommends = (props) => {
             </Wrap>
           ))}
         <Link to="/allfilms">
-          <Wrap
-            className="second-wrap"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <Wrap className="larger-wrap">
             <img src="http://94.241.168.136/default/images/AllFilms.png" alt="" />
-            {isHovered && (
-              <Video
-                autoPlay={true}
-                loop={true}
-                playsInline={true}
-                src="http://94.241.168.136/default/video/AllFilms.mp4"
-                type="video/mp4"
-              />
-            )}
+            <Video
+              autoPlay={true}
+              loop={true}
+              playsInline={true}
+              src="http://94.241.168.136/default/video/AllFilms.mp4"
+              type="video/mp4"
+            />
           </Wrap>
         </Link>
       </Content>
@@ -63,7 +56,7 @@ const Content = styled.div`
 const Wrap = styled.div`
   position: relative;
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* по умолчанию */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
@@ -93,9 +86,9 @@ const Wrap = styled.div`
     border-color: rgba(249, 249, 249, 0.8);
   }
 
-  &.second-wrap {
+  &.larger-wrap {
     width: 100%;
-    padding-top: 66.66%;
+    padding-top: 66.66%; /* изменяем padding-top для .larger-wrap */
   }
 `;
 
