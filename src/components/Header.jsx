@@ -72,15 +72,15 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo href="/home">
-        <img src="/images/icon1-next.png" alt="HOME" />
+        <img src="http://94.241.168.136/default/images/icon1-next.png" alt="HOME" />
       </Logo>
       <NavMenu>
         <NavItem href="/movies">
-          <img src="/images/movie-icon.svg" alt="MOVIES" />
+          <img src="http://94.241.168.136/default/images/movie-icon.svg" alt="MOVIES" />
           <span>MOVIES</span>
         </NavItem>
         <NavItem href="/series">
-          <img src="/images/series-icon.svg" alt="SERIES" />
+          <img src="http://94.241.168.136/default/images/series-icon.svg" alt="SERIES" />
           <span>SERIES</span>
         </NavItem>
       </NavMenu>
@@ -242,7 +242,7 @@ const SearchButton = styled.button`
   border: none;
   background: none;
   cursor: pointer;
-  background-image: url('../images/search.png');
+  background-image: url('http://94.241.168.136/default/images/search.png');
   background-size: cover;
   width: 20px;
   height: 20px;

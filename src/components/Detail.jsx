@@ -64,7 +64,12 @@ const Detail = () => {
 
   return (
     <Container>
-      {message && <Message>{message}<ContinueButton onClick={continueWatching}>Продолжить просмотр</ContinueButton></Message>}
+      {message && (
+        <Message>
+          {message}
+          <ContinueButton onClick={continueWatching}>Продолжить просмотр</ContinueButton>
+        </Message>
+      )}
       {showModal && (
         <Modal>
           <CloseModalButton onClick={closeModal}>X</CloseModalButton>
@@ -86,12 +91,12 @@ const Detail = () => {
       <ContentMeta>
         <Controls>
           <Player onClick={openModal}>
-            <img src="/images/play-icon-black.png" alt="" />
+            <img src="http://94.241.168.136/default/images/play-icon-black.png" alt="" />
             <span>Play</span>
           </Player>
 
           <Trailer onClick={ClickTrailer}>
-            <img src="/images/play-icon-white.png" alt="" />
+            <img src="http://94.241.168.136/default/images/play-icon-white.png" alt="" />
             <span>Trailer</span>
           </Trailer>
           <AddList>
@@ -100,7 +105,7 @@ const Detail = () => {
           </AddList>
           <GroupWatch>
             <div>
-              <img src="/images/group-icon.png" alt="" />
+              <img src="http://94.241.168.136/default/images/group-icon.png" alt="" />
             </div>
           </GroupWatch>
 
@@ -323,6 +328,7 @@ const Message = styled.div`
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
+  text-align: center; /* Центрируем текст */
 `;
 
 const ContinueButton = styled.button`
@@ -332,12 +338,16 @@ const ContinueButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 4px;
-  margin-top: 10px;
+  margin-top: 20px; /* изменено значение с 10px на 20px */
   cursor: pointer;
-
+  display: block; /* Делаем кнопку блочным элементом, чтобы задать ширину */
+  margin: 0 auto; /* Центрируем кнопку */
+  margin-top: 10px;
+  
   &:hover {
     background-color: #e2e2e2;
   }
 `;
+
 
 export default Detail;

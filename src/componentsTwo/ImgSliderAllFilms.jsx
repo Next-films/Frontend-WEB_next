@@ -83,25 +83,25 @@ const ImgSliderAllFilm = (props) => {
     <Carousel {...settings}>
       <Wrap>
         <a>
-          <img src="/images/slider-badging.jpg" alt="" />
+          <img src="http://94.241.168.136/default/images/slider-badging.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="/images/slider-scale.jpg" alt="" />
+          <img src="http://94.241.168.136/default/images/slider-badag.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="/images/slider-badag.jpg" alt="" />
+          <img src="http://94.241.168.136/default/images/slider-scale.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="/images/slider-scales.jpg" alt="" />
+          <img src="http://94.241.168.136/default/images/slider-badag.jpg" alt="" />
         </a>
       </Wrap>
     </Carousel>

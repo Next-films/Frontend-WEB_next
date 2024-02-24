@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -5,12 +6,11 @@ import { selectNewDisney } from "../features/movie/movieSlice";
 
 const NewDisney = (props) => {
   const movies = useSelector(selectNewDisney);
-  console.log(movies, ":🛢️");
-  
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Container>
-      <h4>New films for You</h4>
+      <h4>Series</h4>
       <Content>
         {movies &&
           movies.map((movie, key) => (
@@ -21,14 +21,20 @@ const NewDisney = (props) => {
               </Link>
             </Wrap>
           ))}
-          <Link to="/allseries">
-          <Wrap>
-            <img src="/images/AllSeries.png" alt="" />
-        <video autoPlay={true} loop={true} playsInline={true}>
-          <source src="/videos/1564676115-marvel.mp4" type="video/mp4" />
-        </video>
+        <Link to="/allseries">
+          <Wrap
+            className="larger-wrap"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <img src="http://94.241.168.136/default/images/AllSeries.png" alt="" />
+            {isHovered && (
+              <video autoPlay={true} loop={true} playsInline={true}>
+                <source src="http://94.241.168.136/default/video/AllSeries.mp4" type="video/mp4" />
+              </video>
+            )}
           </Wrap>
-          </Link>
+        </Link>
       </Content>
     </Container>
   );
@@ -79,7 +85,7 @@ const Wrap = styled.div`
     height: 100%;
     position: absolute;
     top: 0px;
-    opacity: 0;
+    opacity: 1; /* Видео всегда должно быть видимым */
     z-index: 0;
   }
 
@@ -89,10 +95,11 @@ const Wrap = styled.div`
 
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
+  }
 
-    video {
-      opacity: 1;
-    }
+  &.larger-wrap {
+    width: 100%;
+    padding-top: 66.66%;
   }
 `;
 
