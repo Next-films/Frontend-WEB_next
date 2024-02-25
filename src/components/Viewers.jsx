@@ -1,41 +1,60 @@
+import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Viewers = (props) => {
   return (
     <Container>
-      <Wrap>
-        <img src="http://94.241.168.136/default/images/viewers-disney.png" alt="" />
-        <video autoPlay={true} loop={true} playsInline={true}>
-          <source src="http://94.241.168.136/default/video/1564674844-disney.mp4" type="video/mp4" />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="http://94.241.168.136/default/images/viewers-pixar.png" alt="" />
-        <video autoPlay={true} loop={true} playsInline={true}>
-          <source src="http://94.241.168.136/default/video/1564676714-pixar.mp4" type="video/mp4" />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="http://94.241.168.136/default/images/viewers-marvel.png" alt="" />
-        <video autoPlay={true} loop={true} playsInline={true}>
-          <source src="http://94.241.168.136/default/video/1564676115-marvel.mp4" type="video/mp4" />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="http://94.241.168.136/default/images/viewers-starwars.png" alt="" />
-        <video autoPlay={true} loop={true} playsInline={true}>
-          <source src="http://94.241.168.136/default/video/1608229455-star-wars.mp4" type="video/mp4" />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="http://94.241.168.136/default/images/viewers-national.png" alt="" />
-        <video autoPlay={true} loop={true} playsInline={true}>
-          <source
-            src="http://94.241.168.136/default/video/1564676296-national-geographic.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </Wrap>
+      <Link to="/disneyuniverse">
+        <Wrap>
+          <img src="http://94.241.168.136/default/images/viewers-disney.png" alt="" />
+          <VideoWrapper>
+            <video autoPlay={true} loop={true} playsInline={true} muted={true}>
+              <source src="http://94.241.168.136/default/video/1564674844-disney.mp4" type="video/mp4" />
+            </video>
+          </VideoWrapper>
+        </Wrap>
+      </Link>
+      <Link to="/pixaruniverse">
+        <Wrap>
+          <img src="http://94.241.168.136/default/images/viewers-pixar.png" alt="" />
+          <VideoWrapper>
+            <video autoPlay={true} loop={true} playsInline={true} muted={true}>
+              <source src="http://94.241.168.136/default/video/1564676714-pixar.mp4" type="video/mp4" />
+            </video>
+          </VideoWrapper>
+        </Wrap>
+      </Link>
+      <Link to="/marveluniverse">
+        <Wrap>
+          <img src="http://94.241.168.136/default/images/viewers-marvel.png" alt="" />
+          <VideoWrapper>
+            <video autoPlay={true} loop={true} playsInline={true} muted={true}>
+              <source src="http://94.241.168.136/default/video/1564676115-marvel.mp4" type="video/mp4" />
+            </video>
+          </VideoWrapper>
+        </Wrap>
+      </Link>
+      <Link to="/starwarsuniverse">
+        <Wrap>
+          <img src="http://94.241.168.136/default/images/viewers-starwars.png" alt="" />
+          <VideoWrapper>
+            <video autoPlay={true} loop={true} playsInline={true} muted={true}>
+              <source src="http://94.241.168.136/default/video/1608229455-star-wars.mp4" type="video/mp4" />
+            </video>
+          </VideoWrapper>
+        </Wrap>
+      </Link>
+      <Link to="/allseries">
+        <Wrap>
+          <img src="http://94.241.168.136/default/images/dc.png" alt="" />
+          <VideoWrapper>
+            <video autoPlay={true} loop={true} playsInline={true} muted={true}>
+              <source src="http://94.241.168.136/default/video/dcintro.mp4" type="video/mp4" />
+            </video>
+          </VideoWrapper>
+        </Wrap>
+      </Link>
     </Container>
   );
 };
@@ -56,8 +75,7 @@ const Container = styled.div`
 const Wrap = styled.div`
   padding-top: 56.25%;
   border-radius: 10px;
-  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
-    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -77,18 +95,8 @@ const Wrap = styled.div`
     top: 0;
   }
 
-  video {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    opacity: 0;
-    z-index: 0;
-  }
-
   &:hover {
-    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
-      rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px, rgb(0 0 0 / 72%) 0px 30px 22px -10px;
 
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
@@ -96,6 +104,32 @@ const Wrap = styled.div`
     video {
       opacity: 1;
     }
+  }
+`;
+
+const VideoWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  ${Wrap}:hover & {
+    opacity: 1;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  ${Wrap}:hover video {
+    opacity: 1;
   }
 `;
 

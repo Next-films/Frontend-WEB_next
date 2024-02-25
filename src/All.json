@@ -11,7 +11,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "PobegIzPritoria",
    "filtr": ["comedy", "drama"],
-   "date": "01/01/2020"
+   "date": "01/01/2020",
+   "universe": "marvel"
 },{
    "id": "PoSoobrazheniuSovesti",
    "backgroundImg": "http://94.241.168.136/films/PoSoobrazheniuSovesti/trailer.gif",
@@ -25,7 +26,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "PoSoobrazheniuSovesti",
    "filtr": ["drama"],
-   "date": "01/01/2021"
+   "date": "01/01/2021",
+   "universe": "starwars"
 },{
    "id": "PoSemeynimObstoyatelstvam1978",
    "backgroundImg": "http://94.241.168.136/films/PoSemeynimObstoyatelstvam1978/trailer.gif",
@@ -38,7 +40,8 @@
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "PoSemeynimObstoyatelstvam1978",
-   "date": "01/01/2022"
+   "date": "01/01/2022",
+   "universe": "disney"
 },{
    "id": "PiratesOfTheCaribbeanDeadMan'sChest2006",
    "backgroundImg": "http://94.241.168.136/films/PiratesOfTheCaribbeanDeadMan'sChest2006/trailer.gif",
@@ -51,7 +54,8 @@
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "PiratesOfTheCaribbeanDeadMan'sChest2006" ,
-   "date": "01/01/2023"
+   "date": "01/01/2023",
+   "universe": "pixar"
 },{
    "id": "Patrol2012",
    "backgroundImg": "http://94.241.168.136/films/Patrol2012/trailer.gif",

@@ -85,10 +85,10 @@ const Detail = () => {
         <img alt={detailData.title} src={detailData.backgroundImg} />
       </Background>
 
-      <ImageTitle>
-        <img alt={detailData.title} src={detailData.titleImg} />
-      </ImageTitle>
       <ContentMeta>
+        <ImageTitle>
+          <img alt={detailData.title} src={detailData.titleImg} />
+        </ImageTitle>
         <Controls>
           <Player onClick={openModal}>
             <img src="http://94.241.168.136/default/images/play-icon-black.png" alt="" />
@@ -145,9 +145,10 @@ const Background = styled.div`
 `;
 
 const ImageTitle = styled.div`
+  position: relative; /* Делаем контейнер относительным */
   align-items: flex-end;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; // Align to the left
   margin: 0px auto;
   height: 30vw;
   min-height: 170px;
@@ -155,14 +156,36 @@ const ImageTitle = styled.div`
   width: 100%;
 
   img {
+    position: absolute; /* Делаем изображение абсолютным */
+    bottom: 20px; /* Сдвигаем на 20px вниз относительно нижней границы контейнера */
     max-width: 600px;
     min-width: 200px;
     width: 35vw;
   }
+
+  @media (max-width: 768px) {
+    align-items: center; // Center vertically on smaller screens
+    justify-content: center; // Center horizontally on smaller screens
+    img {
+      position: static; /* Возвращаем изображение в статическое положение на мобильных устройствах */
+      bottom: auto;
+      margin-top: 30%; /* Добавляем отступ сверху на мобильных устройствах */
+    }
+  }
 `;
+
+
+
+
 
 const ContentMeta = styled.div`
   max-width: 874px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Controls = styled.div`
@@ -171,6 +194,11 @@ const Controls = styled.div`
   flex-flow: row nowrap;
   margin: 24px 0px;
   min-height: 56px;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 `;
 
 const Player = styled.button`
@@ -200,7 +228,7 @@ const Player = styled.button`
 
   @media (max-width: 768px) {
     height: 45px;
-    padding: 0px 12px;
+    padding: 0px -12px;
     font-size: 12px;
     margin: 0px 10px 0px 0px;
 
@@ -272,9 +300,10 @@ const SubTitle = styled.div`
   color: rgb(249, 249, 249);
   font-size: 15px;
   min-height: 20px;
+  text-align: center;
 
-  @media (max-width: 768px) {
-    font-size: 12px;
+  @media (min-width: 768px) {
+    text-align: left;
   }
 `;
 
@@ -283,6 +312,11 @@ const Description = styled.div`
   font-size: 20px;
   padding: 16px 0px;
   color: rgb(249, 249, 249);
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -316,7 +350,7 @@ const CloseModalButton = styled.button`
 const VideoWrapper = styled.div`
   width: 80%;
   max-width: 800px;
-  text-align: center; 
+  text-align: center;
 `;
 
 const Message = styled.div`
@@ -328,7 +362,7 @@ const Message = styled.div`
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
-  text-align: center; /* Центрируем текст */
+  text-align: center;
 `;
 
 const ContinueButton = styled.button`
@@ -338,16 +372,15 @@ const ContinueButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 4px;
-  margin-top: 20px; /* изменено значение с 10px на 20px */
+  margin-top: 20px;
   cursor: pointer;
-  display: block; /* Делаем кнопку блочным элементом, чтобы задать ширину */
-  margin: 0 auto; /* Центрируем кнопку */
+  display: block;
+  margin: 0 auto;
   margin-top: 10px;
-  
+
   &:hover {
     background-color: #e2e2e2;
   }
 `;
-
 
 export default Detail;

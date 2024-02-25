@@ -9,6 +9,10 @@ const initialState = {
   films: null,
   series: null,
   cartoons: null,
+  marvel: null,
+  starwars: null,
+  disney: null,
+  pixar: null,
 };
 
 const movieSlice = createSlice({
@@ -23,6 +27,10 @@ const movieSlice = createSlice({
       state.films = action.payload.films;
       state.series = action.payload.series;
       state.cartoons = action.payload.cartoons;
+      state.marvel = action.payload.marvel;
+      state.starwars = action.payload.starwars;
+      state.disney = action.payload.disney;
+      state.pixar = action.payload.pixar;
     },
   },
 });
@@ -36,5 +44,9 @@ export const selectTrending = (state) => state.movie.trending;
 export const selectFilms = (state) => state.movie.films;
 export const selectСartoons = (state) => state.movie.cartoons;
 export const selectSeries = (state) => state.movie.series;
+export const selectMarvel = (state) => state.movie.marvel;
+export const selectStarwars = (state) => state.movie.starwars;
+export const selectDisney = (state) => state.movie.disney;
+export const selectPixar = (state) => state.movie.pixar;
 
 export default movieSlice.reducer;
