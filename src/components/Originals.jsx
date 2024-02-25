@@ -7,6 +7,21 @@ import { selectOriginal } from "../features/movie/movieSlice";
 const Originals = () => {
   const movies = useSelector(selectOriginal);
   const [isHovered, setIsHovered] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const handleVideoClick = () => {
+    setIsVideoPlaying(!isVideoPlaying);
+  };
+
+  const handleMobileTouchStart = () => {
+    setIsHovered(true);
+    setIsVideoPlaying(true);
+  };
+
+  const handleMobileTouchEnd = () => {
+    setIsHovered(false);
+    setIsVideoPlaying(false);
+  };
 
   return (
     <Container>
@@ -26,9 +41,11 @@ const Originals = () => {
             className="larger-wrap"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={handleMobileTouchStart}
+            onTouchEnd={handleMobileTouchEnd}
           >
             <img src="http://94.241.168.136/default/images/AllCartoons.png" alt="" />
-            <VideoWrapper isVisible={isHovered}>
+            <VideoWrapper isVisible={isHovered || isVideoPlaying}>
               <video autoPlay={true} loop={true} playsInline={true} muted={true}>
                 <source src="http://94.241.168.136/default/video/AllCartoons.mp4" type="video/mp4" />
               </video>

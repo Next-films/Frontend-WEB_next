@@ -7,6 +7,21 @@ import { selectRecommend } from "../features/movie/movieSlice";
 const Recommends = () => {
   const movies = useSelector(selectRecommend);
   const [isHovered, setIsHovered] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const handleVideoClick = () => {
+    setIsVideoPlaying(!isVideoPlaying);
+  };
+
+  const handleMobileTouchStart = () => {
+    setIsHovered(true);
+    setIsVideoPlaying(true);
+  };
+
+  const handleMobileTouchEnd = () => {
+    setIsHovered(false);
+    setIsVideoPlaying(false);
+  };
 
   return (
     <Container>
@@ -26,6 +41,8 @@ const Recommends = () => {
             className="larger-wrap"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={handleMobileTouchStart}
+            onTouchEnd={handleMobileTouchEnd}
           >
             <img src="http://94.241.168.136/default/images/AllFilms.png" alt="" />
             <Video
@@ -34,7 +51,7 @@ const Recommends = () => {
               playsInline={true}
               src="http://94.241.168.136/default/video/AllFilms.mp4"
               type="video/mp4"
-              isVisible={isHovered}
+              isVisible={isHovered || isVideoPlaying}
             />
           </Wrap>
         </Link>
