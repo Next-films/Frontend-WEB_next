@@ -81,11 +81,7 @@ const Detail = () => {
           </VideoWrapper>
         </Modal>
       )}
-      <Background>
-        <img alt={detailData.title} src={detailData.backgroundImg} />
-      </Background>
-
-      <ContentMeta>
+      <Content>
         <ImageTitle>
           <img alt={detailData.title} src={detailData.titleImg} />
         </ImageTitle>
@@ -108,84 +104,81 @@ const Detail = () => {
               <img src="http://94.241.168.136/default/images/group-icon.png" alt="" />
             </div>
           </GroupWatch>
-
         </Controls>
-        <SubTitle>{detailData.subTitle}</SubTitle>
-        <Description>{detailData.description}</Description>
-      </ContentMeta>
+        <DescriptionContainer>
+          <SubTitle>{detailData.subTitle}</SubTitle>
+          <Description>{detailData.description}</Description>
+        </DescriptionContainer>
+      </Content>
+      <Background>
+        <img alt={detailData.title} src={detailData.backgroundImg} />
+      </Background>
     </Container>
   );
 };
 
 const Container = styled.div`
-  position: relative;
-  min-height: calc(100vh - 250px);
-  overflow-x: hidden;
-  display: block;
-  top: 72px;
-  padding: 0 calc(3.5vw + 5px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px; /* Расстояние от края экрана до содержимого */
 `;
 
 const Background = styled.div`
-  left: 0px;
-  opacity: 0.8;
   position: fixed;
-  right: 0px;
-  top: 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 
   img {
-    width: 100vw;
-    height: 100vh;
-
-    @media (max-width: 768px) {
-      width: initial;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
   }
 `;
 
 const ImageTitle = styled.div`
-  position: relative; /* Делаем контейнер относительным */
+  position: relative;
   align-items: flex-end;
   display: flex;
-  justify-content: flex-start; // Align to the left
-  margin: 0px auto;
+  justify-content: flex-start;
   height: 30vw;
   min-height: 170px;
   padding-bottom: 24px;
   width: 100%;
-
   img {
-    position: absolute; /* Делаем изображение абсолютным */
-    bottom: 20px; /* Сдвигаем на 20px вниз относительно нижней границы контейнера */
+    position: absolute;
+    bottom: 20px;
     max-width: 600px;
     min-width: 200px;
     width: 35vw;
   }
-
   @media (max-width: 768px) {
-    align-items: center; // Center vertically on smaller screens
-    justify-content: center; // Center horizontally on smaller screens
+    align-items: center;
+    justify-content: center;
     img {
-      position: static; /* Возвращаем изображение в статическое положение на мобильных устройствах */
+      position: static;
       bottom: auto;
-      margin-top: 30%; /* Добавляем отступ сверху на мобильных устройствах */
+      margin-top: 30%;
     }
   }
 `;
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
 
-
-
-
-const ContentMeta = styled.div`
-  max-width: 874px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 const Controls = styled.div`
@@ -194,11 +187,6 @@ const Controls = styled.div`
   flex-flow: row nowrap;
   margin: 24px 0px;
   min-height: 56px;
-  justify-content: center;
-
-  @media (min-width: 768px) {
-    justify-content: flex-start;
-  }
 `;
 
 const Player = styled.button`
@@ -217,24 +205,11 @@ const Player = styled.button`
   background: rgb(249, 249, 249);
   border: none;
   color: rgb(0, 0, 0);
-
   img {
     width: 32px;
   }
-
   &:hover {
     background: rgb(198, 198, 198);
-  }
-
-  @media (max-width: 768px) {
-    height: 45px;
-    padding: 0px -12px;
-    font-size: 12px;
-    margin: 0px 10px 0px 0px;
-
-    img {
-      width: 25px;
-    }
   }
 `;
 
@@ -255,17 +230,14 @@ const AddList = styled.div`
   border-radius: 50%;
   border: 2px solid white;
   cursor: pointer;
-
   span {
     background-color: rgb(249, 249, 249);
     display: inline-block;
-
     &:first-child {
       height: 2px;
       transform: translate(1px, 0px) rotate(0deg);
       width: 16px;
     }
-
     &:nth-child(2) {
       height: 16px;
       transform: translateX(-8px) rotate(0deg);
@@ -283,28 +255,29 @@ const GroupWatch = styled.div`
   align-items: center;
   cursor: pointer;
   background: white;
-
   div {
     height: 40px;
     width: 40px;
     background: rgb(0, 0, 0);
     border-radius: 50%;
-
     img {
       width: 100%;
     }
   }
 `;
 
+const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: left;
+  z-index: 1;
+`;
+
 const SubTitle = styled.div`
   color: rgb(249, 249, 249);
   font-size: 15px;
   min-height: 20px;
-  text-align: center;
-
-  @media (min-width: 768px) {
-    text-align: left;
-  }
 `;
 
 const Description = styled.div`
@@ -312,11 +285,6 @@ const Description = styled.div`
   font-size: 20px;
   padding: 16px 0px;
   color: rgb(249, 249, 249);
-  text-align: center;
-
-  @media (min-width: 768px) {
-    text-align: left;
-  }
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -354,10 +322,9 @@ const VideoWrapper = styled.div`
 `;
 
 const Message = styled.div`
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 10px 20px;
@@ -374,10 +341,6 @@ const ContinueButton = styled.button`
   border-radius: 4px;
   margin-top: 20px;
   cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  margin-top: 10px;
-
   &:hover {
     background-color: #e2e2e2;
   }
