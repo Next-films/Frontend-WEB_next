@@ -5,51 +5,53 @@ import disneyFilms from '../disneyPlusMoviesData';
 import All from '../All';
 
 const Container = styled.div`
-  position: relative;
-  min-height: calc(100vh - 250px);
-  overflow-x: hidden;
-  display: block;
-  top: 72px;
-  padding: 0 calc(3.5vw + 5px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px; /* Расстояние от края экрана до содержимого */
 `;
 
 const Background = styled.div`
-  left: 0px;
-  opacity: 0.8;
   position: fixed;
-  right: 0px;
-  top: 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 
   img {
-    width: 100vw;
-    height: 100vh;
-
-    @media (max-width: 768px) {
-      width: initial;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
   }
 `;
 
 const ImageTitle = styled.div`
+  position: relative;
   align-items: flex-end;
   display: flex;
   justify-content: flex-start;
-  margin: 0px auto;
   height: 30vw;
   min-height: 170px;
   padding-bottom: 24px;
   width: 100%;
-
   img {
+    position: absolute;
+    bottom: 20px;
     max-width: 600px;
     min-width: 200px;
     width: 35vw;
   }
-`;
-
-const ContentMeta = styled.div`
-  max-width: 874px;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    img {
+      position: static;
+      bottom: auto;
+      margin-top: 30%;
+    }
+  }
 `;
 
 const Controls = styled.div`
@@ -60,7 +62,7 @@ const Controls = styled.div`
   min-height: 56px;
 `;
 
-const Play = styled.button`
+const Player = styled.button`
   font-size: 15px;
   margin: 0px 22px 0px 0px;
   padding: 0px 24px;
@@ -76,28 +78,15 @@ const Play = styled.button`
   background: rgb(249, 249, 249);
   border: none;
   color: rgb(0, 0, 0);
-
   img {
     width: 32px;
   }
-
   &:hover {
     background: rgb(198, 198, 198);
   }
-
-  @media (max-width: 768px) {
-    height: 45px;
-    padding: 0px 12px;
-    font-size: 12px;
-    margin: 0px 10px 0px 0px;
-
-    img {
-      width: 25px;
-    }
-  }
 `;
 
-const Trailer = styled(Play)`
+const Trailer = styled(Player)`
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgb(249, 249, 249);
   color: rgb(249, 249, 249);
@@ -114,17 +103,14 @@ const AddList = styled.div`
   border-radius: 50%;
   border: 2px solid white;
   cursor: pointer;
-
   span {
     background-color: rgb(249, 249, 249);
     display: inline-block;
-
     &:first-child {
       height: 2px;
       transform: translate(1px, 0px) rotate(0deg);
       width: 16px;
     }
-
     &:nth-child(2) {
       height: 16px;
       transform: translateX(-8px) rotate(0deg);
@@ -142,13 +128,11 @@ const GroupWatch = styled.div`
   align-items: center;
   cursor: pointer;
   background: white;
-
   div {
     height: 40px;
     width: 40px;
     background: rgb(0, 0, 0);
     border-radius: 50%;
-
     img {
       width: 100%;
     }
@@ -159,10 +143,6 @@ const SubTitle = styled.div`
   color: rgb(249, 249, 249);
   font-size: 15px;
   min-height: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
 `;
 
 const Description = styled.div`
@@ -176,22 +156,26 @@ const Description = styled.div`
   }
 `;
 
+const ContentMeta = styled.div`
+  /* Add your styles here */
+`;
+
 const VideoWrapper = styled.div`
   width: 100%;
   overflow-x: auto;
-  white-space: nowrap;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  &::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
-  }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+
+  cursor: grab;
+  user-select: none;
 `;
 
 const Video = styled.video`
   width: 350px;
   margin-right: 20px;
-  border-radius: 10px; /* добавляем закругление */
-  
+  border-radius: 10px;
 
   @media (max-width: 768px) {
     width: 250px;
@@ -201,7 +185,12 @@ const Video = styled.video`
 const Detail = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
-  const [showVideo, setShowVideo] = useState(false); // Добавляем состояние для отображения/скрытия видео
+  const [showVideo, setShowVideo] = useState(false);
+  const videoWrapperRef = useRef(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStartX, setDragStartX] = useState(0);
+  const [scrollStartX, setScrollStartX] = useState(0);
 
   useEffect(() => {
     if (id) {
@@ -215,7 +204,47 @@ const Detail = () => {
     }
   }, [id]);
 
-  const toggleVideo = () => setShowVideo(prevState => !prevState); // Функция для переключения состояния видео
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!isDragging && videoWrapperRef.current) {
+        setScrollPosition(videoWrapperRef.current.scrollLeft);
+      }
+    };
+
+    if (videoWrapperRef.current) {
+      videoWrapperRef.current.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (videoWrapperRef.current) {
+        videoWrapperRef.current.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [isDragging]);
+
+  const handleMouseDown = event => {
+    setIsDragging(true);
+    setDragStartX(event.clientX);
+    setScrollStartX(videoWrapperRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = event => {
+    if (!isDragging) return;
+    const dragDistance = event.clientX - dragStartX;
+    videoWrapperRef.current.scrollLeft = scrollStartX - dragDistance;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const toggleVideo = () => {
+    if (detailData.films && detailData.films.length > 0 && !showVideo) {
+      setShowVideo(true);
+    } else {
+      setShowVideo(prevState => !prevState);
+    }
+  };
 
   const clickTrailer = () => {
     window.open(detailData.trailer, '_blank');
@@ -232,10 +261,10 @@ const Detail = () => {
       </ImageTitle>
       <ContentMeta>
         <Controls>
-          <Play onClick={toggleVideo}>
+          <Player onClick={toggleVideo}>
             <img src="http://94.241.168.136/default/images/play-icon-black.png" alt="" />
             <span>Play</span>
-          </Play>
+          </Player>
 
           <Trailer onClick={clickTrailer}>
             <img src="http://94.241.168.136/default/images/play-icon-white.png" alt="" />
@@ -255,12 +284,15 @@ const Detail = () => {
         <Description>{detailData.description}</Description>
       </ContentMeta>
 
-      {/* Показываем видео только если showVideo равно true */}
       {showVideo && (
-        <VideoWrapper>
+        <VideoWrapper
+          ref={videoWrapperRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}>
           {detailData.films &&
             detailData.films.map((video, index) => (
-              <Video key={index} controls>
+              <Video key={index} controls onEnded={() => setShowVideo(false)}>
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </Video>
