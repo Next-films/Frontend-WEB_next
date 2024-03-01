@@ -16,6 +16,7 @@ const Detail = () => {
     if (id) {
       const combinedData = [...disneyFilms, ...All];
       const foundFilm = combinedData.find(film => film.id === id);
+      const films = foundFilm.films; // Adding definition for films
       setDetailData(foundFilm);
 
       const savedPosition = localStorage.getItem(`video_position_${id}`);
@@ -43,17 +44,16 @@ const Detail = () => {
   };
 
   const continueWatching = () => {
-    setShowModal(true);
-    videoRef.current.currentTime = savedPosition;
-    videoRef.current.play();
+    if (savedPosition !== null && videoRef.current) {
+      videoRef.current.currentTime = savedPosition;
+      videoRef.current.play();
+      setShowModal(true);
+    }
   };
-
-  const films = detailData.films;
-  const trailer = detailData.trailer;
 
   const ClickTrailer = () => {
     setSavedPosition(null);
-    window.open(trailer, '_blank');
+    window.open(detailData.trailer, '_blank'); // Changed from trailer to detailData.trailer
   };
 
   const formatTime = (timeInSeconds) => {
@@ -74,8 +74,13 @@ const Detail = () => {
         <Modal>
           <CloseModalButton onClick={closeModal}>X</CloseModalButton>
           <VideoWrapper>
-            <video ref={videoRef} controls onTimeUpdate={(e) => setSavedPosition(e.target.currentTime)}>
-              <source src={films} type="video/mp4" />
+            <video 
+              ref={videoRef} 
+              controls 
+              onTimeUpdate={(e) => setSavedPosition(e.target.currentTime)}
+              onPause={(e) => setSavedPosition(e.target.currentTime)}
+            >
+              <source src={detailData.films} type="video/mp4" /> {/* Changed from films to detailData.films */}
               Your browser does not support the video tag.
             </video>
           </VideoWrapper>
@@ -116,12 +121,12 @@ const Detail = () => {
     </Container>
   );
 };
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-left: 20px; /* Расстояние от края экрана до содержимого */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 `;
 
 const Background = styled.div`
@@ -175,6 +180,8 @@ const Content = styled.div`
   padding: 20px;
   text-align: center;
   z-index: 1;
+  height: 100%;
+  overflow-y: auto;
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -322,13 +329,14 @@ const VideoWrapper = styled.div`
 `;
 
 const Message = styled.div`
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 20px;
   text-align: center;
 `;
 
