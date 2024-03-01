@@ -10,7 +10,7 @@ const ListAllFilm = () => {
 
   return (
     <Container>
-      <h4>Recommended </h4>
+      <h4>Cortoons</h4>
 
       <Content>
   {movies &&
