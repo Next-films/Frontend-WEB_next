@@ -9,7 +9,7 @@
         "title": "Inside Out",
         "titleImg": "http://94.241.168.136/films/GreenMile/logo.png",
         "type": "recommend",
-        "films": "../1564674844-disney.mp4",
+        "films": "http://94.241.168.136/default/video/1564674844-disney.mp4",
         "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
         "name": "puzzle"
      },{
@@ -18,10 +18,10 @@
       "cardImg": "http://94.241.168.136/films/DjangoUnchained2012/poster.jpeg",
       "description": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home.",
       "subTitle": "2015 • 1h 35m • Coming of Age, Family, Animation",
-      "title": "Inside Out",
+      "title": "Inside ",
       "titleImg": "http://94.241.168.136/films/DjangoUnchained2012/logo.png",
       "type": "recommend",
-      "films": "../public/videos/1564674844-disney.mp4",
+      "films": "http://94.241.168.136/default/video/dcintro.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M"
    },{
       "id": "TheGodfather1974",
