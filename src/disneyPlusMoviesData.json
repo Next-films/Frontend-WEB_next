@@ -9,7 +9,7 @@
         "title": "Inside Out",
         "titleImg": "http://94.241.168.136/films/GreenMile/logo.png",
         "type": "recommend",
-        "films": "../public/videos/1564674844-disney.mp4",
+        "films": "../1564674844-disney.mp4",
         "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
         "name": "puzzle"
      },{
