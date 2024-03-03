@@ -4,47 +4,54 @@
         "id": "GreenMile",
         "backgroundImg": "http://94.241.168.136/films/GreenMile/trailer.gif",
         "cardImg": "http://94.241.168.136/films/GreenMile/zelenaya_milya_psiho.jpg",
-        "description": "Пол Эджкомб работает в тюрьме, где встречает особенного заключённого, Джона Коффи. Их встреча приводит к истории о справедливости и человеческой природе.",
+        "description": "Обвиненный в страшном преступлении, Джон Коффи оказывается в блоке смертников тюрьмы «Холодная гора». Вновь прибывший обладал поразительным ростом и был пугающе спокоен, что, впрочем, никак не влияло на отношение к нему начальника блока Пола Эджкомба, привыкшего исполнять приговор.",
         "subTitle": "1999 • 3h 09m • Драму, Криминал, Фэнтези",
-        "title": "Inside Out",
+        "title": "Зелёная миля",
         "titleImg": "http://94.241.168.136/films/GreenMile/logo.png",
         "type": "recommend",
         "films": "../public/videos/1564674844-disney.mp4",
         "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-        "name": "puzzle"
+        "name": "Зелёная миля, зеленая миля",
+        "date": "18/04/2000"
      },{
       "id": "DjangoUnchained2012",
       "backgroundImg": "http://94.241.168.136/films/DjangoUnchained2012/trailerNew.gif",
       "cardImg": "http://94.241.168.136/films/DjangoUnchained2012/poster.jpeg",
-      "description": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home.",
-      "subTitle": "2015 • 1h 35m • Coming of Age, Family, Animation",
-      "title": "Inside Out",
+      "description": "Эксцентричный охотник за головами, также известный как «Дантист», промышляет отстрелом самых опасных преступников на Диком Западе. Работенка пыльная, и без надежного помощника ему не обойтись. Но как найти такого и желательно не очень дорогого? Беглый раб по имени Джанго — прекрасная кандидатура. Правда, у нового помощника свои мотивы — кое с чем надо разобраться.",
+      "subTitle": "2012 г. ‧ Вестерн/Боевик ‧ 2 ч 45 мин",
+      "title": "Джанго освобождённый",
       "titleImg": "http://94.241.168.136/films/DjangoUnchained2012/logo.png",
       "type": "recommend",
       "films": "../public/videos/1564674844-disney.mp4",
-      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M"
+      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+      "name": "Джанго освобождённый, джанго освобождённый",
+      "date": "17/11/2013"
    },{
       "id": "TheGodfather1974",
       "backgroundImg": "http://94.241.168.136/films/TheGodfather1974/trailer.gif",
       "cardImg": "http://94.241.168.136/films/TheGodfather1974/poster.jpg",
-      "description": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home.",
-      "subTitle": "2015 • 1h 35m • Coming of Age, Family, Animation",
-      "title": "Inside Out",
+      "description": "Криминальная сага, повествующая о нью-йоркской сицилийской мафиозной семье Корлеоне. Фильм охватывает период 1945-1955 годов.Глава семьи, Дон Вито Корлеоне, выдаёт замуж свою дочь. В это время со Второй мировой войны возвращается его любимый сын Майкл. Майкл, герой войны, гордость семьи, не выражает желания заняться жестоким семейным бизнесом.",
+      "subTitle": "1972 г. ‧ Криминал ‧ 2 ч 55 мин",
+      "title": "Крёстный отец",
       "titleImg": "http://94.241.168.136/films/TheGodfather1974/logoNew.png",
       "type": "recommend",
       "films": "../public/videos/1564674844-disney.mp4",
-      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M"
+      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+      "name": "Крёстный отец, крёстный отец, крестный отец, Крестный отец",
+      "date": "14/03/1973"
    },{
       "id": "kunfupanda1",
       "backgroundImg": "http://94.241.168.136/cartoon/KunfuPanda1/trailer.gif",
       "cardImg": "http://94.241.168.136/cartoon/KunfuPanda1/posterNew.jpeg",
       "description": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home.",
-      "subTitle": "2015 • 1h 35m • Coming of Age, Family, Animation",
-      "title": "Inside Out",
+      "subTitle": "2008 г. ‧ Детский/Комедия ‧ 1 ч 32 мин",
+      "title": "Кунг-Фу Панда",
       "titleImg": "http://94.241.168.136/cartoon/KunfuPanda1/logo.svg.png",
       "type": "original",
       "films": "../public/videos/1564674844-disney.mp4",
-      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M"
+      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+      "name": "Кунг-Фу Панда,кунг-фу панда, кунгфу, Кунгфу, кунг, Кунг",
+      "date": "15/05/2008"
    }
 
 ]
