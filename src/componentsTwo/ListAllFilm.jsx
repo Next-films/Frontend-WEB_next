@@ -37,8 +37,22 @@ const ListAllFilm = () => {
   };
 
   const sortedMovies = [...filterMoviesByCategories()].sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
+    // Проверяем, что у обоих объектов есть свойство date перед сортировкой
+    if (!a.date || !b.date) {
+      return 0; // Если какой-то из объектов не имеет свойства date, считаем их равными
+    }
+
+    // Преобразовываем дату в формат, понятный объекту Date
+    const dateA = new Date(
+      parseInt(a.date.split("/")[2]),
+      parseInt(a.date.split("/")[1]) - 1,
+      parseInt(a.date.split("/")[0])
+    );
+    const dateB = new Date(
+      parseInt(b.date.split("/")[2]),
+      parseInt(b.date.split("/")[1]) - 1,
+      parseInt(b.date.split("/")[0])
+    );
     return dateB - dateA; // сортировка по убыванию даты
   });
 
