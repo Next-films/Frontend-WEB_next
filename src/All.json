@@ -222,7 +222,7 @@
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Avengers Infinity War, Мстители: Война бесконечности, мстители: Война бесконечности",
-   "date": "04/05/2001",
+   "date": "03/05/2018",
    "universe": "marvel"
 },{
    "id": "8Oceans",
@@ -463,11 +463,11 @@
    },{
       "id": "Madagaskar",
    "backgroundImg": "http://94.241.168.136/cartoon/Madagaskar/trailer.gif",
-   "cardImg": "http://94.241.168.136/cartoon/Madagaskar/logo.png",
+   "cardImg": "http://94.241.168.136/cartoon/Madagaskar/poster.jpg",
    "description": "Четверо изнеженных животных из Центрального зоопарка в Нью-Йорке — лев Алекс, зебра Марти, жираф Мелман и гиппопотамиха Глория — решаются на побег. Оказавшись после кораблекрушения на экзотическом острове Мадагаскар, населенном лемурами и поедающими их фоссами, путешественники с ужасом понимают, что с городскими привычками им придется распрощаться.",
    "subTitle": "2005 г. ‧ Комедия/Приключения ‧ 1 ч 26 мин",
    "title": "Мадагаскар",
-   "titleImg": "http://94.241.168.136/cartoon/Madagaskar/poster.jpg",
+   "titleImg": "http://94.241.168.136/cartoon/Madagaskar/logo.png",
    "type": "cartoons",
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
