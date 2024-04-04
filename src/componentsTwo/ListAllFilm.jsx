@@ -8,6 +8,7 @@ const ListAllFilm = () => {
   const movies = useSelector(selectFilms);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [randomMovie, setRandomMovie] = useState(null); // Состояние для хранения случайного фильма
+  const [showRemainingGenres, setShowRemainingGenres] = useState(false); // Состояние для отображения оставшихся жанров
 
   const isCategorySelected = (category) => {
     return selectedCategories.includes(category);
@@ -32,7 +33,9 @@ const ListAllFilm = () => {
       if (!movie.filtr || !Array.isArray(movie.filtr)) {
         return false;
       }
-      return selectedCategories.every(category => movie.filtr.includes(category));
+      return selectedCategories.every((category) =>
+        movie.filtr.includes(category)
+      );
     });
   };
 
@@ -62,26 +65,48 @@ const ListAllFilm = () => {
     setRandomMovie(sortedMovies[randomIndex]);
   };
 
+  const remainingGenres = [
+    "Драма",
+    "Комедия",
+    "Экшн",
+    "Триллер",
+    "Ужасы",
+    "Фантастика",
+    "Приключения",
+    "Криминал",
+    "Романтика",
+    "Мистика",
+    "Популярное"
+  ].filter((genre) => !isCategorySelected(genre));
+
+  const toggleShowRemainingGenres = () => {
+    setShowRemainingGenres(!showRemainingGenres);
+  };
+
   return (
     <Container>
       <ButtonContainer>
-        <ButtonContainerInner>
-          <Button onClick={() => {setSelectedCategories([]); setRandomMovie(null);}}>All Films</Button>
-          <Button
-            onClick={() => toggleCategory("comedy")}
-            selected={isCategorySelected("comedy")}
-          >
-            Comedy
-          </Button>
-          <Button        
-            onClick={() => toggleCategory("drama")}
-            selected={isCategorySelected("drama")}
-          >
-            Drama
-          </Button>
-          {/* Кнопка "Рандом" */}
-          <Button onClick={chooseRandomMovie}>Random</Button>
-        </ButtonContainerInner>
+        <Button onClick={() => { setSelectedCategories([]); setRandomMovie(null); }}>Все фильмы</Button>
+        <Button onClick={() => toggleCategory("Драма")} selected={isCategorySelected("Драма")}>
+          Драма
+        </Button>
+        <Button onClick={() => toggleCategory("Комедия")} selected={isCategorySelected("Комедия")}>
+          Комедия
+        </Button>
+        <Button onClick={() => toggleCategory("Ужасы")} selected={isCategorySelected("Ужасы")}>
+          Ужасы
+        </Button>
+        {showRemainingGenres && (
+          remainingGenres.map((genre) => (
+            <Button key={genre} onClick={() => toggleCategory(genre)} selected={isCategorySelected(genre)}>
+              {genre}
+            </Button>
+          ))
+        )}
+        {remainingGenres.length > 0 && (
+          <Button onClick={toggleShowRemainingGenres}>Еще жанры</Button>
+        )}
+        <Button onClick={chooseRandomMovie}>Случайный</Button>
       </ButtonContainer>
 
       <Content>
@@ -106,41 +131,35 @@ const ListAllFilm = () => {
 };
 
 const Container = styled.div`
-  padding: 0 0 26px;
+  padding: 20px;
   color: rgb(255, 255, 255);
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
-  margin-bottom: 10px; /* Добавлен отступ снизу */
-`;
-
-const ButtonContainerInner = styled.div`
-  display: flex;
-  margin: 10px; /* Добавлен отступ сверху и снизу */
-  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
 `;
 
 const Button = styled.button`
   border-radius: 100px;
-  padding: 6px 10px; /* Adjusted padding */
+  padding: 6px 10px;
   background-color: ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")};
   color: #ffffff;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  margin-right: 10px;
-  border: 2px solid ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")}; /* Added border */
-  transition: background-color 0.3s, border-color 0.3s; /* Added transition for smooth effect */
+  margin: 0 5px 10px;
+  border: 2px solid ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")};
+  transition: background-color 0.3s, border-color 0.3s;
 
-  /* Добавляем стили для кнопки "Рандом" */
   &.random {
     background-color: #fca311;
     border-color: #fca311;
   }
 `;
-
 
 const Content = styled.div`
   display: grid;
