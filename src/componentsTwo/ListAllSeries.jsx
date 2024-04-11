@@ -1,50 +1,159 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectSeries } from "../features/movie/movieSlice";
-
+import { selectFilms } from "../features/movie/movieSlice";
 
 const ListAllFilm = () => {
-  const movies = useSelector(selectSeries);
+  const movies = useSelector(selectFilms);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [randomMovie, setRandomMovie] = useState(null);
+  const [showRemainingGenres, setShowRemainingGenres] = useState(false);
+
+  const isCategorySelected = (category) => {
+    return selectedCategories.includes(category);
+  };
+
+  const toggleCategory = (category) => {
+    if (isCategorySelected(category)) {
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
+  };
+
+  const filterMoviesByCategories = () => {
+    if (!movies || movies.length === 0) {
+      return [];
+    }
+    if (selectedCategories.length === 0) {
+      return movies;
+    }
+    return movies.filter((movie) => {
+      if (!movie.filtr || !Array.isArray(movie.filtr)) {
+        return false;
+      }
+      return selectedCategories.every((category) =>
+        movie.filtr.includes(category)
+      );
+    });
+  };
+
+  const sortedMovies = [...filterMoviesByCategories()].sort((a, b) => {
+    if (!a.date || !b.date) {
+      return 0;
+    }
+    const dateA = new Date(
+      parseInt(a.date.split("/")[2]),
+      parseInt(a.date.split("/")[1]) - 1,
+      parseInt(a.date.split("/")[0])
+    );
+    const dateB = new Date(
+      parseInt(b.date.split("/")[2]),
+      parseInt(b.date.split("/")[1]) - 1,
+      parseInt(b.date.split("/")[0])
+    );
+    return dateB - dateA;
+  });
+
+  const chooseRandomMovie = () => {
+    const randomIndex = Math.floor(Math.random() * sortedMovies.length);
+    setRandomMovie(sortedMovies[randomIndex]);
+  };
+
+  const remainingGenres = [
+    "Экшн",
+    "Триллер",
+    "Фантастика",
+    "Приключения",
+    "Криминал",
+    "Романтика",
+    "Мистика",
+    "Популярное"
+  ].filter((genre) => !isCategorySelected(genre));
+
+  const toggleShowRemainingGenres = () => {
+    setShowRemainingGenres(!showRemainingGenres);
+  };
 
   return (
     <Container>
-      <h4>Recommended </h4>
+      <ButtonContainer>
+        <Button onClick={() => { setSelectedCategories([]); setRandomMovie(null); }}>Все фильмы</Button>
+        <Button onClick={() => toggleCategory("Драма")} selected={isCategorySelected("Драма")}>
+          Драма
+        </Button>
+        <Button onClick={() => toggleCategory("Комедия")} selected={isCategorySelected("Комедия")}>
+          Комедия
+        </Button>
+        <Button onClick={() => toggleCategory("Ужасы")} selected={isCategorySelected("Ужасы")}>
+          Ужасы
+        </Button>
+        {showRemainingGenres && (
+          remainingGenres.map((genre) => (
+            <Button key={genre} onClick={() => toggleCategory(genre)} selected={isCategorySelected(genre)}>
+              {genre}
+            </Button>
+          ))
+        )}
+        {remainingGenres.length > 0 && (
+          <Button onClick={toggleShowRemainingGenres}>
+            {showRemainingGenres ? "Скрыть жанры" : "Ещё жанры"}
+          </Button>
+        )}
+        <Button onClick={chooseRandomMovie}>Случайный</Button>
+      </ButtonContainer>
 
       <Content>
-  {movies &&
-    movies.map((movie, key) => (
-      <Wrap key={key}>
-        <Link to={`/detailseries/` + movie.id}>
-          <img src={movie.cardImg} alt={movie.title} />
-        </Link>
-      </Wrap>
-    ))}
-
-</Content>
-
+        {randomMovie ? (
+          <Wrap>
+            <Link to={`/detail/${randomMovie.id}`}>
+              <img src={randomMovie.cardImg} alt={randomMovie.title} />
+            </Link>
+          </Wrap>
+        ) : (
+          sortedMovies.map((movie, key) => (
+            <Wrap key={key}>
+              <Link to={`/detail/${movie.id}`}>
+                <img src={movie.cardImg} alt={movie.title} />
+              </Link>
+            </Wrap>
+          ))
+        )}
+      </Content>
     </Container>
   );
 };
 
 const Container = styled.div`
-  padding: 0 0 26px;
+  padding: 20px;
   color: rgb(255, 255, 255);
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
 `;
 
 const Button = styled.button`
   border-radius: 100px;
-  padding: 8px 12px;
-  background-color: #424d64aa;
+  padding: 6px 10px;
+  background-color: ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")};
   color: #ffffff;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  left: 50%;
-  position: absolute;
-  margin-top: 20px;
-  transform: translate(-50%, -50%);
+  margin: 0 5px 10px;
+  border: 2px solid ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")};
+  transition: background-color 0.3s, border-color 0.3s;
+
+  &.random {
+    background-color: #fca311;
+    border-color: #fca311;
+  }
 `;
 
 const Content = styled.div`
@@ -88,6 +197,6 @@ const Wrap = styled.div`
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
   }
-};`
+`;
 
 export default ListAllFilm;

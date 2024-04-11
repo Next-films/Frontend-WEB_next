@@ -71,10 +71,10 @@ const Header = (props) => {
 
   return (
     <Nav>
-      <Logo href="/home">
+      <Logo href="/">
         <img src="http://94.241.168.136/default/images/icon1-next.png" alt="HOME" />
       </Logo>
-      <NavMenu>
+{/*       <NavMenu>
         <NavItem href="/movies">
           <img src="http://94.241.168.136/default/images/movie-icon.svg" alt="MOVIES" />
           <span>MOVIES</span>
@@ -83,18 +83,21 @@ const Header = (props) => {
           <img src="http://94.241.168.136/default/images/series-icon.svg" alt="SERIES" />
           <span>SERIES</span>
         </NavItem>
-      </NavMenu>
+      </NavMenu> */}
       <SearchContainer>
         <TextInput
           type="text"
           placeholder="Поиск..."
           value={textInput}
           onChange={handleTextChange}
-          onKeyPress={handleKeyPress} // Обработчик события нажатия клавиши
+          onKeyPress={handleKeyPress} 
         />
         <SearchButton onClick={handleSearch} />
       </SearchContainer>
-      <Login onClick={handleAuth}>{userName ? "Logout" : "Login"}</Login>
+      {/* <Login onClick={handleAuth}>{userName ? "Logout" : "Login"}</Login> */}
+      <RightLogo href="https://majestic-network.org">
+        <img src="http://94.241.168.136/default/images/network.png" alt="SECOND LOGO" />
+      </RightLogo>
     </Nav>
   );
 };
@@ -112,6 +115,20 @@ const Logo = styled.a`
   img {
     display: block;
     width: 100%;
+  }
+`;
+const RightLogo = styled.a`
+  padding: 0;
+  width: 80px;
+
+  max-height: 70px;
+  font-size: 0;
+  display: inline-block;
+  margin-left: auto;
+
+  img {
+    display: block;
+    width: 60%;
   }
 `;
 
@@ -223,6 +240,7 @@ const Login = styled.a`
 const SearchContainer = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
   width: 50%;
   margin: 0 auto;
   background-color: transparent;
@@ -232,21 +250,25 @@ const TextInput = styled.input`
   flex: 1;
   padding: 10px 20px;
   border: 1px solid #ccc;
-  border-radius: 20px; /* Закругленные края */
+  border-radius: 20px;
   font-size: 16px;
-  color: #333;
-  background-color: transparent; /* полностью прозрачный фон */
+  color: white; /* Изменен цвет текста на белый */
+  background-color: transparent;
 `;
+
 
 const SearchButton = styled.button`
   border: none;
   background: none;
   cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   background-image: url('http://94.241.168.136/default/images/search.png');
   background-size: cover;
   width: 20px;
   height: 20px;
-  margin-left: 10px;
 `;
 
 export default Header;

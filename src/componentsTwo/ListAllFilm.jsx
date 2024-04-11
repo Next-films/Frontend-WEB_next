@@ -7,8 +7,8 @@ import { selectFilms } from "../features/movie/movieSlice";
 const ListAllFilm = () => {
   const movies = useSelector(selectFilms);
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [randomMovie, setRandomMovie] = useState(null); // Состояние для хранения случайного фильма
-  const [showRemainingGenres, setShowRemainingGenres] = useState(false); // Состояние для отображения оставшихся жанров
+  const [randomMovie, setRandomMovie] = useState(null);
+  const [showRemainingGenres, setShowRemainingGenres] = useState(false);
 
   const isCategorySelected = (category) => {
     return selectedCategories.includes(category);
@@ -40,12 +40,9 @@ const ListAllFilm = () => {
   };
 
   const sortedMovies = [...filterMoviesByCategories()].sort((a, b) => {
-    // Проверяем, что у обоих объектов есть свойство date перед сортировкой
     if (!a.date || !b.date) {
-      return 0; // Если какой-то из объектов не имеет свойства date, считаем их равными
+      return 0;
     }
-
-    // Преобразовываем дату в формат, понятный объекту Date
     const dateA = new Date(
       parseInt(a.date.split("/")[2]),
       parseInt(a.date.split("/")[1]) - 1,
@@ -56,21 +53,17 @@ const ListAllFilm = () => {
       parseInt(b.date.split("/")[1]) - 1,
       parseInt(b.date.split("/")[0])
     );
-    return dateB - dateA; // сортировка по убыванию даты
+    return dateB - dateA;
   });
 
-  // Функция для выбора случайного фильма
   const chooseRandomMovie = () => {
     const randomIndex = Math.floor(Math.random() * sortedMovies.length);
     setRandomMovie(sortedMovies[randomIndex]);
   };
 
   const remainingGenres = [
-    "Драма",
-    "Комедия",
     "Экшн",
     "Триллер",
-    "Ужасы",
     "Фантастика",
     "Приключения",
     "Криминал",
@@ -104,13 +97,15 @@ const ListAllFilm = () => {
           ))
         )}
         {remainingGenres.length > 0 && (
-          <Button onClick={toggleShowRemainingGenres}>Еще жанры</Button>
+          <Button onClick={toggleShowRemainingGenres}>
+            {showRemainingGenres ? "Скрыть жанры" : "Ещё жанры"}
+          </Button>
         )}
         <Button onClick={chooseRandomMovie}>Случайный</Button>
       </ButtonContainer>
 
       <Content>
-        {randomMovie ? ( // Проверяем, есть ли выбранный случайный фильм
+        {randomMovie ? (
           <Wrap>
             <Link to={`/detail/${randomMovie.id}`}>
               <img src={randomMovie.cardImg} alt={randomMovie.title} />
