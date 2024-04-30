@@ -8,8 +8,11 @@ const Detail = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const [adPlaying, setAdPlaying] = useState(false);
+  const [filmPaused, setFilmPaused] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [videoPlayed, setVideoPlayed] = useState(false);
+  const [showAd, setShowAd] = useState(false); // Новое состояние для показа рекламы
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -27,6 +30,8 @@ const Detail = () => {
     if (storedTime && storedModalState) {
       setCurrentTime(parseFloat(storedTime));
       setShowModal(storedModalState === 'true');
+    } else {
+      setShowModal(false);
     }
   }, []);
 
@@ -41,6 +46,7 @@ const Detail = () => {
 
   const handlePlay = () => {
     setVideoPlayed(true);
+    setShowModal(true);
   };
 
   useEffect(() => {
@@ -59,10 +65,15 @@ const Detail = () => {
   const openModal = () => setShowModal(true);
 
   const closeModal = () => {
-    setCurrentTime(videoRef.current.currentTime);
-    localStorage.setItem('videoCurrentTime', videoRef.current.currentTime.toString());
+    if (videoPlayed) {
+      setCurrentTime(videoRef.current.currentTime);
+      localStorage.setItem('videoCurrentTime', videoRef.current.currentTime.toString());
+    }
     setShowModal(false);
     localStorage.setItem('showModal', 'false');
+
+    // Показываем рекламу после скрытия фильма
+    setShowAd(true);
   };
 
   const ClickTrailer = () => {
@@ -73,7 +84,26 @@ const Detail = () => {
     setShowModal(true);
   };
 
-  const buttonText =  "Продолжить просмотр";
+  const handleAdEnd = () => {
+    setAdPlaying(false);
+    // Вернуться к основному видео после завершения рекламы
+    setShowModal(true);
+    videoRef.current.play();
+  };
+
+  const handleTimeUpdate = () => {
+    if (!filmPaused && !adPlaying && videoRef.current.currentTime >= 10) {
+      videoRef.current.pause();
+      setFilmPaused(true);
+      setAdPlaying(true);
+      setCurrentTime(videoRef.current.currentTime);
+      setTimeout(() => {
+        setShowModal(false);
+      }, 500); // Задержка перед автоматическим скрытием модального окна
+    }
+  };
+
+  const buttonText = videoPlayed ? "Продолжить просмотр" : "Пауза";
 
   return (
     <Container>
@@ -82,12 +112,43 @@ const Detail = () => {
           <CloseModalButton onClick={closeModal}>X</CloseModalButton>
           <VideoWrapper>
             <VideoFrame>
+              {adPlaying ? (
+                <video
+                  ref={videoRef}
+                  controls
+                  onPause={() => {}}
+                  onEnded={handleAdEnd}
+                >
+                  <source src={detailData.ads} type="video/mp4" />
+                  Ваш браузер не поддерживает видео.
+                </video>
+              ) : (
+                <video
+                  ref={videoRef}
+                  controls
+                  onPause={() => {}}
+                  onTimeUpdate={handleTimeUpdate}
+                >
+                  <source src={detailData.films} type="video/mp4" />
+                  Ваш браузер не поддерживает видео.
+                </video>
+              )}
+            </VideoFrame>
+          </VideoWrapper>
+        </Modal>
+      )}
+      {showAd && ( // Показываем рекламу после скрытия фильма
+        <Modal>
+          <CloseModalButton onClick={() => setShowAd(false)}>X</CloseModalButton>
+          <VideoWrapper>
+            <VideoFrame>
               <video
                 ref={videoRef}
                 controls
                 onPause={() => {}}
+                onEnded={() => setShowAd(false)} // Скрыть рекламу после ее завершения
               >
-                <source src={detailData.films} type="video/mp4" />
+                <source src={detailData.ads} type="video/mp4" /> {/* Используем рекламное видео для показа */}
                 Ваш браузер не поддерживает видео.
               </video>
             </VideoFrame>
@@ -95,9 +156,6 @@ const Detail = () => {
         </Modal>
       )}
       <Content>
-        {currentTime > 0 && (
-          <ContinueButton onClick={continueWatching}>{buttonText}</ContinueButton>
-        )}
         <ImageTitle>
           <img alt={detailData.title} src={detailData.titleImg} />
         </ImageTitle>
@@ -122,9 +180,6 @@ const Detail = () => {
             </div>
           </GroupWatch>
         </Controls>
-        {currentTime > 0 && (
-          <ContinueButtonOverlay onClick={continueWatching}>{buttonText}</ContinueButtonOverlay>
-        )}
         <DescriptionContainer>
           <SubTitle>{detailData.subTitle}</SubTitle>
           <Description>{detailData.description}</Description>
@@ -373,3 +428,4 @@ const ContinueButtonOverlay = styled(ContinueButton)`
 `;
 
 export default Detail;
+

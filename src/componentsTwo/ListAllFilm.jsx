@@ -61,6 +61,7 @@ const ListAllFilm = () => {
     setRandomMovie(sortedMovies[randomIndex]);
   };
 
+  const defaultGenres = ["Драма", "Комедия", "Ужасы"];
   const remainingGenres = [
     "Экшн",
     "Триллер",
@@ -70,7 +71,7 @@ const ListAllFilm = () => {
     "Романтика",
     "Мистика",
     "Популярное"
-  ].filter((genre) => !isCategorySelected(genre));
+  ];
 
   const toggleShowRemainingGenres = () => {
     setShowRemainingGenres(!showRemainingGenres);
@@ -79,29 +80,24 @@ const ListAllFilm = () => {
   return (
     <Container>
       <ButtonContainer>
-        <Button onClick={() => { setSelectedCategories([]); setRandomMovie(null); }}>Все фильмы</Button>
-        <Button onClick={() => toggleCategory("Драма")} selected={isCategorySelected("Драма")}>
-          Драма
-        </Button>
-        <Button onClick={() => toggleCategory("Комедия")} selected={isCategorySelected("Комедия")}>
-          Комедия
-        </Button>
-        <Button onClick={() => toggleCategory("Ужасы")} selected={isCategorySelected("Ужасы")}>
-          Ужасы
-        </Button>
-        {showRemainingGenres && (
+        <Button onClick={() => { setSelectedCategories([]); setRandomMovie(null); }}>Все Фильмы</Button>
+        {defaultGenres.map((genre) => (
+          <Button key={genre} onClick={() => toggleCategory(genre)} selected={isCategorySelected(genre)}>
+            {genre}
+          </Button>
+        ))}
+        {showRemainingGenres &&
           remainingGenres.map((genre) => (
             <Button key={genre} onClick={() => toggleCategory(genre)} selected={isCategorySelected(genre)}>
               {genre}
             </Button>
-          ))
-        )}
+          ))}
         {remainingGenres.length > 0 && (
           <Button onClick={toggleShowRemainingGenres}>
             {showRemainingGenres ? "Скрыть жанры" : "Ещё жанры"}
           </Button>
         )}
-        <Button onClick={chooseRandomMovie}>Случайный</Button>
+        <Button className="random" onClick={chooseRandomMovie}>Случайный</Button>
       </ButtonContainer>
 
       <Content>
@@ -150,11 +146,12 @@ const Button = styled.button`
   border: 2px solid ${({ selected }) => (selected ? "#3182ce" : "#424d64aa")};
   transition: background-color 0.3s, border-color 0.3s;
 
-  &.random {
-    background-color: #fca311;
-    border-color: #fca311;
+  &:hover {
+    background-color: ${({ selected }) => (selected ? "#3182ce" : "#4f5969")};
+    border-color: ${({ selected }) => (selected ? "#3182ce" : "#4f5969")};
   }
 `;
+
 
 const Content = styled.div`
   display: grid;

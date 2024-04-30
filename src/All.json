@@ -7,12 +7,12 @@
    "title": "Побег из претории", 
    "titleImg": "http://94.241.168.136/films/PobegIzPritoria/logo.png", 
    "type": "films", 
-   "films": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
+   "films": "../test.mp4",
+   "ads": "../ads.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
    "name": "Побег из претории, побег из претории, Escape from Pretoria, побег из претории, побег из претории", 
-   "filtr": ["Комедия", "drama"], 
+   "filtr": ["Комедия", "Криминал"], 
    "date": "06/03/2020" 
-
 },{ 
    "id": "PoSoobrazheniuSovesti", 
    "backgroundImg": "http://94.241.168.136/films/PoSoobrazheniuSovesti/trailer.gif", 
@@ -25,7 +25,7 @@
    "films": "../public/videos/1564674844-disney.mp4", 
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
    "name": "По соображениям совести, по соображениям совести", 
-   "filtr": ["drama"], 
+   "filtr": ["Криминал"], 
    "date": "17/11/2016"
 },{
    "id": "PiratesOfTheCaribbeanDeadMan'sChest2006",
@@ -40,7 +40,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Пираты Карибского моря: Сундук мертвеца, пираты Карибского моря: Сундук мертвеца, Сундук мертвеца, Пираты Карибского моря,пираты Карибского моря" ,
    "date": "13/07/2006",
-   "universe": "disney"
+   "universe": "disney",
+   "filtr": ["Романтика"]
 },{
    "id": "Patrol2012",
    "backgroundImg": "http://94.241.168.136/films/Patrol2012/trailer.gif",
