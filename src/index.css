@@ -8,6 +8,11 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'source-code-pro', Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  /* Для лучшей совместимости с разными браузерами */
+  font-feature-settings: "liga", "calt", "dlig";
+  -moz-font-feature-settings: "liga=1,calt=1,dlig=1";
+  -webkit-font-feature-settings: "liga", "calt", "dlig";
+  -o-font-feature-settings: "liga", "calt", "dlig";
 }
