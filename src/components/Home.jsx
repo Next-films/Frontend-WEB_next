@@ -99,6 +99,7 @@ const Container = styled.main`
     inset: 0px;
     opacity: 1;
     z-index: -1;
+
   }
 `;
 
