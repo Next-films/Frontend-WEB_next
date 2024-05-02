@@ -22,7 +22,7 @@
    "title": "По соображениям совести", 
    "titleImg": "http://94.241.168.136/films/PoSoobrazheniuSovesti/logo.png", 
    "type": "films", 
-   "films": "../public/videos/1564674844-disney.mp4", 
+   "films": "http://94.241.168.136/films/PoSoobrazheniuSovesti/Hacksaw.Ridge.2016.BDRip__Kinosimka.RU.mp4", 
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
    "name": "По соображениям совести, по соображениям совести", 
    "filtr": ["Криминал"], 
@@ -51,7 +51,7 @@
    "title": "Патруль",
    "titleImg": "http://94.241.168.136/films/Patrol2012/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Patrol2012/Patrul_HD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Патруль,патруль" ,
    "date": "20/09/2012"
@@ -64,7 +64,7 @@
    "title": "Остров проклятых",
    "titleImg": "http://94.241.168.136/films/OstrovProclytih/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/OstrovProclytih/Ostrov_proklyatyh_HDRip_kinosimka.pro.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Остров проклятых, острав проклятых",
    "date": "18/09/2012"
@@ -77,7 +77,7 @@
    "title": "Оппенгеймер",
    "titleImg": "http://94.241.168.136/films/Oppenheimer/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Oppenheimer/Oppenheimer.2023.D.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Оппенгеймер, оппенгеймер, ",
    "date": "20/07/2023"
@@ -90,7 +90,7 @@
    "title": "Дело храбрых",
    "titleImg": "http://94.241.168.136/films/OnlyTheBrave/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/OnlyTheBrave/Дело_храбрых.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Дело храбрых, дело храбрых",
    "date": "09/11/2017"
@@ -103,7 +103,7 @@
    "title": "Пролетая над гнездом кукушки",
    "titleImg": "http://94.241.168.136/films/OneFlewOverTheCuckoo'sNest/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/OneFlewOverTheCuckoo'sNest/Proletaya.Nad.Gnezdom.Kukushki.1975__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Пролетая над гнездом кукушки, пролетая над гнездом кукушки" 
 },{
@@ -115,7 +115,7 @@
    "title": "Двенадцать друзей Оушена",
    "titleImg": "http://94.241.168.136/films/Ocean'sTwelve/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Ocean'sTwelve/12_druzey_Oushena_HDRip__kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Двенадцать друзей Оушена, двенадцать друзей Оушена, оушена, оушен",
    "date": "13/01/2005"
@@ -128,7 +128,7 @@
    "title": "Одиннадцать друзей Оушена",
    "titleImg": "http://94.241.168.136/films/Ocean'sEleven/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Ocean'sEleven/11_druzey_Oushena__kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Одиннадцать друзей Оушена, Оушен, Одиннадцать друзей Оушена",
    "date": "07/12/2001"
@@ -141,7 +141,7 @@
    "title": "Матрица",
    "titleImg": "http://94.241.168.136/films/Matrix/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Matrix/Shmatrica.2003.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Матрица, матрица",
    "date": "14/10/1999"
@@ -154,7 +154,7 @@
    "title": "Леон",
    "titleImg": "http://94.241.168.136/films/Leon1994/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Leon1994/Leon_HDRip__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Леон, леон",
    "date": "23/09/1998"
@@ -194,7 +194,7 @@
    "title": "Один дома",
    "titleImg": "http://94.241.168.136/films/HomeAlone/logo.png",
    "type": "films",
-   "films": ["../public/videos/1564674844-disney.mp4", "../public/videos/1564676115-marvel.mp4","../public/videos/1564674844-disney.mp4","../public/videos/1564674844-disney.mp4","../public/videos/1564674844-disney.mp4"],
+   "films": "http://94.241.168.136/films/HomeAlone/Home.Alone1990___Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Один дома, один дома",
    "date": "27/12/1993"
@@ -220,7 +220,7 @@
    "title": "Мстители: Война бесконечности",
    "titleImg": "http://94.241.168.136/films/Avengers Infinity War/logoNewWar.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Avengers%20Infinity%20War/mstiteli-voyna-beskonechnosti.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Avengers Infinity War, Мстители: Война бесконечности, мстители: Война бесконечности",
    "date": "03/05/2018",
@@ -234,7 +234,7 @@
    "title": "8 подруг Оушена",
    "titleImg": "http://94.241.168.136/films/8Oceans/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/8Oceans/8-podrug-oushena.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "8 подруг Оушена, оушена, Оушена, подруг",
    "date": "21/06/2018"
@@ -247,7 +247,7 @@
    "title": "57 секунд",
    "titleImg": "http://94.241.168.136/films/57Seconds/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/57Seconds/57-sekund-mp4-2023.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "57 секунд",
    "date": "29/09/2023"
@@ -260,7 +260,7 @@
    "title": "Тринадцать друзей Оушена",
    "titleImg": "http://94.241.168.136/films/13Oceans/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/13Oceans/12_druzey_Oushena_HDRip__kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Тринадцать друзей Оушена,оушена",
    "date":"09/06/2007"
@@ -273,7 +273,7 @@
    "title": "Умница Уилл Хантинг",
    "titleImg": "http://94.241.168.136/films/GoodWillHunting/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/GoodWillHunting/Ymnica_Will_Hunting__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Умница Уилл Хантинг, умница" 
 },{
@@ -285,7 +285,7 @@
    "title": "1+1",
    "titleImg": "http://94.241.168.136/films/1+1/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/1+1/1_plus_1_Gollivudskaya_istoriya_2018_kinosimka.pro.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "1+1 Неприкасаемые неприкасаемые",
    "date": "26/04/2011"
@@ -298,7 +298,7 @@
    "title": "Такси 1",
    "titleImg": "http://94.241.168.136/films/Taxi5/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Taxi5/Taxi.5.2018.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 5 Такси 5 taxi 5 такси" ,
    "date": "10/05/2018"
@@ -311,7 +311,7 @@
    "title": "Такси 4",
    "titleImg": "http://94.241.168.136/films/Taxi4/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Taxi4/Taxi_4_HDRip__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 4 Такси 4 taxi 4 такси" ,
    "date": "06/03/2007"
@@ -324,7 +324,7 @@
    "title": "Такси 3",
    "titleImg": "http://94.241.168.136/films/Taxi3/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Taxi3/Taxi_3_HDRip__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 3 Такси 3 taxi 3 такси",
    "date": "06/03/2003"
@@ -337,7 +337,7 @@
    "title": "Такси 1",
    "titleImg": "http://94.241.168.136/films/Taxi1/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Taxi1/taksi.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 1 Такси 1 taxi 1 такси",
    "date": "08/04/2001"
@@ -350,7 +350,7 @@
    "title": "Такси 2",
    "titleImg": "http://94.241.168.136/films/Taxi2/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/Taxi2/taksi-2.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 2 Такси 2 taxi 2 такси",
    "date": "25/03/2000"
@@ -363,7 +363,7 @@
    "title": "Крестный отец 2",
    "titleImg": "http://94.241.168.136/films/TheGodfather1974/logoNew.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/TheGodfather1974/The.Godfather.Part.2.1974__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Крестный Отец 2 крестный отец 2 the godfather 2",
    "date": "20/11/1974"
@@ -376,7 +376,7 @@
    "title": "Зеленая миля",
    "titleImg": "http://94.241.168.136/films/GreenMile/logo.png",
    "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/films/GreenMile/zelenaya-milya-small.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Green Mile Зеленая Миля зеленая миля",
    "date": "18/04/2000"
@@ -415,7 +415,7 @@
    "title": "Холодное сердце", 
    "titleImg": "http://94.241.168.136/cartoon/HolodnoeSerdce/logo.png", 
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4", 
+   "films": "http://94.241.168.136/cartoon/HolodnoeSerdce/film.mp4", 
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
    "name": "Холодное Сердце холодное сердце",
    "date": "12/12/2013",
@@ -429,7 +429,7 @@
       "title": "Кунг-Фу Панда",
       "titleImg": "http://94.241.168.136/cartoon/KunfuPanda1/logo.svg.png",
       "type": "cartoons",
-      "films": "../public/videos/1564674844-disney.mp4",
+      "films": "http://94.241.168.136/cartoon/KunfuPanda1/Kung_Fu_Panda_2008_720.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "Кунг-Фу Панда,кунг-фу панда, кунгфу, Кунгфу, кунг, Кунг",
       "date": "15/05/2008"
@@ -442,7 +442,7 @@
    "title": "Как приручить дракона",
    "titleImg": "http://94.241.168.136/cartoon/KakPriruchitDrakona/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/KakPriruchitDrakona/Kak_priruchit_drakona_2010_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Как приручить дракона, как приручить дракона",
    "date": "18/03/2010"
@@ -456,7 +456,7 @@
    "title": "Король Лев",
    "titleImg": "http://94.241.168.136/cartoon/KorolLev/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/KorolLev/Korol_Lev_1994_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Король Лев, король лев",
    "date": "20/01/1995",
@@ -470,7 +470,7 @@
    "title": "Мадагаскар",
    "titleImg": "http://94.241.168.136/cartoon/Madagaskar/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Madagaskar/Madagaskar_2005_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Мадагаскар, мадагаскар",
    "date": "27/05/2005"
@@ -483,7 +483,7 @@
    "title": "Леди Баг и Супер-Кот: Пробуждение сил",
    "titleImg": "http://94.241.168.136/cartoon/LadybugCatNoirTheMovie/poster.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/LadybugCatNoirTheMovie/Ledi_bag_i_super_kot_Probuzhdenie_sily_2023_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Леди Баг и Супер-Кот: Пробуждение сил, леди баг, Леди баг",
    "date": "17/08/2023"
@@ -496,7 +496,7 @@
    "title": "Корпорация монстров",
    "titleImg": "http://94.241.168.136/cartoon/MonsterINC/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/MonsterINC/Korporaciya_monstrov_2001_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Корпорация монстров,корпорация монстров",
    "date": "22/03/2002",
@@ -510,7 +510,7 @@
    "title": "Монстры на каникулах",
    "titleImg": "http://94.241.168.136/cartoon/MonstryNaKanikulah/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/MonstryNaKanikulah/Monsrty.na.kanikulah.2012.D.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Монстры на каникулах,монстры на каникулах",
    "date": "22/03/2002"
@@ -523,7 +523,7 @@
    "title": "Остров сокровищ",
    "titleImg": "http://94.241.168.136/cartoon/Ostrovsokrovih/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Ostrovsokrovih/Ostrov_sokrovish_1988_bdrip_720_kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Остров сокровищ, остров сокровищ",
    "date": "24/10/1988"
@@ -536,7 +536,7 @@
    "title": "Рататуй",
    "titleImg": "http://94.241.168.136/cartoon/Ratatui/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Ratatui/Ratatuj_2007_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Рататуй, рататуй",
    "date": "29/06/1007",
@@ -550,7 +550,7 @@
    "title": "Шрек",
    "titleImg": "http://94.241.168.136/cartoon/Shrek/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Shrek/Shrek.2001__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Шрек, шрек",
    "date": "31/10/2001"
@@ -563,7 +563,7 @@
    "title": "Человек-паук: Паутина вселенных",
    "titleImg": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/Chelovek_pauk_cherez_vselennie_2018_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Человек-паук: Паутина вселенных, человек-паук: Паутина вселенных, Человек-паук Паутина вселенных, Человек-паук паутина вселенных",
    "date": "12/05/2023"
@@ -576,7 +576,7 @@
    "title": "Человек-паук: Через вселенные",
    "titleImg": "http://94.241.168.136/cartoon/Spider-ManIntoTheSpider-Verse/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Spider-ManIntoTheSpider-Verse/Chelovek_pauk_Pautina_vselennih_2023_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Человек-паук: Через вселенных, человек-паук: Через вселенные, Человек-паук Через вселенные, Человек-паук через вселенные ",
    "date": "13/12/2018"
@@ -589,7 +589,7 @@
    "title": "Тачки",
    "titleImg": "http://94.241.168.136/cartoon/Tachki/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Tachki/Tachki_2006_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Тачки, тачки ",
    "date": "15/06/2006"
@@ -602,7 +602,7 @@
    "title": "Тачки 2",
    "titleImg": "http://94.241.168.136/cartoon/Tachki2/logo.png",
    "type": "cartoons",
-   "films": "../public/videos/1564674844-disney.mp4",
+   "films": "http://94.241.168.136/cartoon/Tachki2/Tachki_2_2011_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Тачки, тачки, Тачки 2, тачки 2",
    "date": "23/05/2011"
@@ -615,7 +615,7 @@
       "title": "Тайны Коко",
       "titleImg": "http://94.241.168.136/cartoon/TainaKoko/logo.png",
       "type": "cartoons",
-      "films": "../public/videos/1564674844-disney.mp4",
+      "films": "http://94.241.168.136/cartoon/TainaKoko/Tayna_koko_2017_720_kinovasek.net.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "тайны коко, Тайны коко, Тайны Коко, тайны Коко",
       "date": "23/11/2017"   
@@ -628,7 +628,7 @@
       "title": "ВАЛЛ-И",
       "titleImg": "http://94.241.168.136/cartoon/Valli/logo.png",
       "type": "cartoons",
-      "films": "../public/videos/1564674844-disney.mp4",
+      "films": "http://94.241.168.136/cartoon/Valli/WALL-E.2008___Kinosimka.RU.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "ВАЛЛ-И, валл-и, валли,",
       "date": "03/07/2008"   
@@ -641,7 +641,7 @@
       "title": "Зверополис",
       "titleImg": "http://94.241.168.136/cartoon/Zveropolis/logo.png",
       "type": "cartoons",
-      "films": "../public/videos/1564674844-disney.mp4",
+      "films": "http://94.241.168.136/cartoon/Zveropolis/Zveropolis_2016_720-kinovasek.net.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "тайны коко, Тайны коко, Тайны Коко, тайны Коко",
       "date": "03/03/2016",

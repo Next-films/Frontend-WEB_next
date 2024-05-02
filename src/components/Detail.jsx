@@ -8,11 +8,8 @@ const Detail = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
   const [showModal, setShowModal] = useState(false);
-  const [adPlaying, setAdPlaying] = useState(false);
-  const [filmPaused, setFilmPaused] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
   const [videoPlayed, setVideoPlayed] = useState(false);
-  const [showAd, setShowAd] = useState(false); // Новое состояние для показа рекламы
+  const [currentTime, setCurrentTime] = useState(0);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -71,36 +68,10 @@ const Detail = () => {
     }
     setShowModal(false);
     localStorage.setItem('showModal', 'false');
-
-    // Показываем рекламу после скрытия фильма
-    setShowAd(true);
   };
 
   const ClickTrailer = () => {
     window.open(detailData.trailer, '_blank');
-  };
-
-  const continueWatching = () => {
-    setShowModal(true);
-  };
-
-  const handleAdEnd = () => {
-    setAdPlaying(false);
-    // Вернуться к основному видео после завершения рекламы
-    setShowModal(true);
-    videoRef.current.play();
-  };
-
-  const handleTimeUpdate = () => {
-    if (!filmPaused && !adPlaying && videoRef.current.currentTime >= 10) {
-      videoRef.current.pause();
-      setFilmPaused(true);
-      setAdPlaying(true);
-      setCurrentTime(videoRef.current.currentTime);
-      setTimeout(() => {
-        setShowModal(false);
-      }, 500); // Задержка перед автоматическим скрытием модального окна
-    }
   };
 
   const buttonText = videoPlayed ? "Продолжить просмотр" : "Пауза";
@@ -112,43 +83,12 @@ const Detail = () => {
           <CloseModalButton onClick={closeModal}>X</CloseModalButton>
           <VideoWrapper>
             <VideoFrame>
-              {adPlaying ? (
-                <video
-                  ref={videoRef}
-                  controls
-                  onPause={() => {}}
-                  onEnded={handleAdEnd}
-                >
-                  <source src={detailData.ads} type="video/mp4" />
-                  Ваш браузер не поддерживает видео.
-                </video>
-              ) : (
-                <video
-                  ref={videoRef}
-                  controls
-                  onPause={() => {}}
-                  onTimeUpdate={handleTimeUpdate}
-                >
-                  <source src={detailData.films} type="video/mp4" />
-                  Ваш браузер не поддерживает видео.
-                </video>
-              )}
-            </VideoFrame>
-          </VideoWrapper>
-        </Modal>
-      )}
-      {showAd && ( // Показываем рекламу после скрытия фильма
-        <Modal>
-          <CloseModalButton onClick={() => setShowAd(false)}>X</CloseModalButton>
-          <VideoWrapper>
-            <VideoFrame>
               <video
                 ref={videoRef}
                 controls
                 onPause={() => {}}
-                onEnded={() => setShowAd(false)} // Скрыть рекламу после ее завершения
               >
-                <source src={detailData.ads} type="video/mp4" /> {/* Используем рекламное видео для показа */}
+                <source src={detailData.films} type="video/mp4" />
                 Ваш браузер не поддерживает видео.
               </video>
             </VideoFrame>
@@ -428,4 +368,3 @@ const ContinueButtonOverlay = styled(ContinueButton)`
 `;
 
 export default Detail;
-
