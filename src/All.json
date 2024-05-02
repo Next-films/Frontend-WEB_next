@@ -11,7 +11,7 @@
    "ads": "../ads.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
    "name": "Побег из претории, побег из претории, Escape from Pretoria, побег из претории, побег из претории", 
-   "filtr": ["Комедия", "Криминал"], 
+   "filtr": ["Триллер", "Детектив"], 
    "date": "06/03/2020" 
 },{ 
    "id": "PoSoobrazheniuSovesti", 
@@ -25,7 +25,7 @@
    "films": "http://94.241.168.136/films/PoSoobrazheniuSovesti/Hacksaw.Ridge.2016.BDRip__Kinosimka.RU.mp4", 
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
    "name": "По соображениям совести, по соображениям совести", 
-   "filtr": ["Криминал"], 
+   "filtr": ["Военный","Триллер"], 
    "date": "17/11/2016"
 },{
    "id": "PiratesOfTheCaribbeanDeadMan'sChest2006",
@@ -41,7 +41,7 @@
    "name": "Пираты Карибского моря: Сундук мертвеца, пираты Карибского моря: Сундук мертвеца, Сундук мертвеца, Пираты Карибского моря,пираты Карибского моря" ,
    "date": "13/07/2006",
    "universe": "disney",
-   "filtr": ["Романтика"]
+   "filtr": ["Приключения","Фантастика"]
 },{
    "id": "Patrol2012",
    "backgroundImg": "http://94.241.168.136/films/Patrol2012/trailer.gif",
@@ -54,7 +54,8 @@
    "films": "http://94.241.168.136/films/Patrol2012/Patrul_HD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Патруль,патруль" ,
-   "date": "20/09/2012"
+   "date": "20/09/2012", 
+   "filtr": ["Боевик", "Криминал"]
 },{
    "id": "OstrovProclytih",
    "backgroundImg": "http://94.241.168.136/films/OstrovProclytih/trailer.gif",
@@ -67,20 +68,22 @@
    "films": "http://94.241.168.136/films/OstrovProclytih/Ostrov_proklyatyh_HDRip_kinosimka.pro.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Остров проклятых, острав проклятых",
-   "date": "18/09/2012"
+   "date": "18/09/2012", 
+   "filtr": ["Триллер", "Детектив"]
 },{
    "id": "Oppenheimer",
    "backgroundImg": "http://94.241.168.136/films/Oppenheimer/trailer.gif",
    "cardImg": "http://94.241.168.136/films/Oppenheimer/poster.jpg",
    "description": "История жизни американского физика Роберта Оппенгеймера, который стоял во главе первых разработок ядерного оружия.",
-   "subTitle": "2023 г. ‧ Триллер/Детективный фильм ‧ 3 часа",
+   "subTitle": "2023 г. ‧ Триллер/Историческое произведение  ‧ 3 часа",
    "title": "Оппенгеймер",
    "titleImg": "http://94.241.168.136/films/Oppenheimer/logo.png",
    "type": "films",
    "films": "http://94.241.168.136/films/Oppenheimer/Oppenheimer.2023.D.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Оппенгеймер, оппенгеймер, ",
-   "date": "20/07/2023"
+   "date": "20/07/2023", 
+   "filtr": ["Триллер", "Исторический фильм"]
 },{
    "id": "OnlyTheBrave",
    "backgroundImg": "http://94.241.168.136/films/OnlyTheBrave/trailer.gif",
@@ -93,7 +96,8 @@
    "films": "http://94.241.168.136/films/OnlyTheBrave/Дело_храбрых.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Дело храбрых, дело храбрых",
-   "date": "09/11/2017"
+   "date": "09/11/2017", 
+   "filtr": ["Боевик", "Триллер"]
 },{
    "id": "OneFlewOverTheCuckoo'sNest",
    "backgroundImg": "http://94.241.168.136/films/OneFlewOverTheCuckoo'sNest/trailer.gif",
@@ -105,7 +109,8 @@
    "type": "films",
    "films": "http://94.241.168.136/films/OneFlewOverTheCuckoo'sNest/Proletaya.Nad.Gnezdom.Kukushki.1975__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "Пролетая над гнездом кукушки, пролетая над гнездом кукушки" 
+   "name": "Пролетая над гнездом кукушки, пролетая над гнездом кукушки", 
+   "filtr": ["Драма", "Триллер"] 
 },{
    "id": "Ocean'sTwelve",
    "backgroundImg": "http://94.241.168.136/films/Ocean'sTwelve/trailer.gif",
@@ -118,7 +123,8 @@
    "films": "http://94.241.168.136/films/Ocean'sTwelve/12_druzey_Oushena_HDRip__kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Двенадцать друзей Оушена, двенадцать друзей Оушена, оушена, оушен",
-   "date": "13/01/2005"
+   "date": "13/01/2005", 
+   "filtr": ["Криминал", "Комедия"] 
 },{
    "id": "Ocean'sEleven",
    "backgroundImg": "http://94.241.168.136/films/Ocean'sEleven/trailer.gif",
@@ -131,20 +137,22 @@
    "films": "http://94.241.168.136/films/Ocean'sEleven/11_druzey_Oushena__kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Одиннадцать друзей Оушена, Оушен, Одиннадцать друзей Оушена",
-   "date": "07/12/2001"
+   "date": "07/12/2001", 
+   "filtr": ["Криминал", "Комедия"] 
 },{
    "id": "Matrix",
    "backgroundImg": "http://94.241.168.136/films/Matrix/trailer.gif",
    "cardImg": "http://94.241.168.136/films/Matrix/poster.jpeg",
    "description": "Мир Матрицы — это иллюзия, существующая только в бесконечном сне обреченного человечества. Холодный мир будущего, в котором люди — всего лишь батарейки в компьютерных системах",
-   "subTitle": "2001 г. ‧ Криминал/Комедия ‧ 1 ч 56 мин",
+   "subTitle": "2001 г. ‧ Боевик/Фантастика ‧ 1 ч 56 мин",
    "title": "Матрица",
    "titleImg": "http://94.241.168.136/films/Matrix/logo.png",
    "type": "films",
    "films": "http://94.241.168.136/films/Matrix/Shmatrica.2003.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Матрица, матрица",
-   "date": "14/10/1999"
+   "date": "14/10/1999", 
+   "filtr": ["Боевик", "Фантастика"] 
 },{
    "id": "Leon1994",
    "backgroundImg": "http://94.241.168.136/films/Leon1994/trailer.gif",
@@ -157,34 +165,8 @@
    "films": "http://94.241.168.136/films/Leon1994/Leon_HDRip__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Леон, леон",
-   "date": "23/09/1998"
-},{
-   "id": "JestokyRomans1984",
-   "backgroundImg": "http://94.241.168.136/films/JestokyRomans1984/trailer.gif",
-   "cardImg": "http://94.241.168.136/films/JestokyRomans1984/poster.jpeg",
-   "description": "Безжалостен и жесток мир, в котором правят деньги, где все продается и покупается, в том числе совесть, красота, любовь.",
-   "subTitle": "1984 г. ‧ Романтика/Драма ‧ 2 ч 25 мин",
-   "title": "Жестокий романс",
-   "titleImg": "http://94.241.168.136/films/JestokyRomans1984/logo.png",
-   "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
-   "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "Жестокий романс, жестокий романс",
-   "date": "23/10/1984"
-
-},{
-   "id": "InAugust44",
-   "backgroundImg": "http://94.241.168.136/films/InAugust44/trailer.gif",
-   "cardImg": "http://94.241.168.136/films/InAugust44/poster.jpg",
-   "description": "Лето 1944. До Великой Победы остается еще около года. Белоруссия уже освобождена, однако с ее территории регулярно выходит в эфир группа лазутчиков, передавая врагам очень важную информацию о советских войсках. На поиски шпионов, в район регулярных выходов в эфир запеленгованной рации, был послан отряд разведчиков, во главе с офицером СМЕРШа.",
-   "subTitle": "2001 г. ‧ Военный/Боевик ‧ 1 ч 58 мин",
-   "title": "В августе 44-го",
-   "titleImg": "http://94.241.168.136/films/InAugust44/logo.png",
-   "type": "films",
-   "films": "../public/videos/1564674844-disney.mp4",
-   "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "В августе 44-го, в августе 44-го ",
-   "date": "04/05/2001"
+   "date": "23/09/1998", 
+   "filtr": ["Боевик", "Криминал"] 
 },{
    "id": "HomeAlone",
    "backgroundImg": "http://94.241.168.136/films/HomeAlone/trailer.gif",
@@ -197,7 +179,8 @@
    "films": "http://94.241.168.136/films/HomeAlone/Home.Alone1990___Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Один дома, один дома",
-   "date": "27/12/1993"
+   "date": "27/12/1993", 
+   "filtr": ["Детский", "Комедия"] 
 },{
    "id": "Gentelmens",
    "backgroundImg": "http://94.241.168.136/films/Gentelmens/trailer.gif",
@@ -210,7 +193,8 @@
    "films": "../public/videos/1564674844-disney.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Джентльмены, джентльмены",
-   "date": "03/12/2020"
+   "date": "03/12/2020", 
+   "filtr": ["Криминал", "Боевик"] 
 },{
    "id": "Avengers Infinity War",
    "backgroundImg": "http://94.241.168.136/films/Avengers Infinity War/trailer.gif",
@@ -224,7 +208,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Avengers Infinity War, Мстители: Война бесконечности, мстители: Война бесконечности",
    "date": "03/05/2018",
-   "universe": "marvel"
+   "universe": "marvel", 
+   "filtr": ["Боевик", "Фантастика"] 
 },{
    "id": "8Oceans",
    "backgroundImg": "http://94.241.168.136/films/8Oceans/trailer.gif",
@@ -237,7 +222,8 @@
    "films": "http://94.241.168.136/films/8Oceans/8-podrug-oushena.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "8 подруг Оушена, оушена, Оушена, подруг",
-   "date": "21/06/2018"
+   "date": "21/06/2018", 
+   "filtr": ["Криминал", "Комедия"] 
 },{
    "id": "57Seconds",
    "backgroundImg": "http://94.241.168.136/films/57Seconds/trailer.gif",
@@ -250,7 +236,8 @@
    "films": "http://94.241.168.136/films/57Seconds/57-sekund-mp4-2023.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "57 секунд",
-   "date": "29/09/2023"
+   "date": "29/09/2023", 
+   "filtr": ["Триллер", "Фантастика"]
 },{
    "id": "13Oceans",
    "backgroundImg": "http://94.241.168.136/films/13Oceans/trailer.gif",
@@ -263,7 +250,8 @@
    "films": "http://94.241.168.136/films/13Oceans/12_druzey_Oushena_HDRip__kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Тринадцать друзей Оушена,оушена",
-   "date":"09/06/2007"
+   "date":"09/06/2007", 
+   "filtr": ["Криминал", "Комедия"] 
 },{
    "id": "GoodWillHunting",
    "backgroundImg": "http://94.241.168.136/films/GoodWillHunting/trailer.gif",
@@ -275,7 +263,8 @@
    "type": "films",
    "films": "http://94.241.168.136/films/GoodWillHunting/Ymnica_Will_Hunting__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-   "name": "Умница Уилл Хантинг, умница" 
+   "name": "Умница Уилл Хантинг, умница" , 
+   "filtr": ["Романтика", "Триллер"]
 },{
    "id": "1+1",
    "backgroundImg": "http://94.241.168.136/films/1+1/trailer.gif",
@@ -288,7 +277,8 @@
    "films": "http://94.241.168.136/films/1+1/1_plus_1_Gollivudskaya_istoriya_2018_kinosimka.pro.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "1+1 Неприкасаемые неприкасаемые",
-   "date": "26/04/2011"
+   "date": "26/04/2011", 
+   "filtr": ["Комедия", "Драма"]
 },{
    "id": "Taxi5",
    "backgroundImg": "http://94.241.168.136/films/Taxi5/trailer.gif",
@@ -301,7 +291,8 @@
    "films": "http://94.241.168.136/films/Taxi5/Taxi.5.2018.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 5 Такси 5 taxi 5 такси" ,
-   "date": "10/05/2018"
+   "date": "10/05/2018", 
+   "filtr": ["Комедия", "Боевик"]
 },{
    "id": "Taxi4",
    "backgroundImg": "http://94.241.168.136/films/Taxi4/trailer.gif",
@@ -314,7 +305,8 @@
    "films": "http://94.241.168.136/films/Taxi4/Taxi_4_HDRip__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 4 Такси 4 taxi 4 такси" ,
-   "date": "06/03/2007"
+   "date": "06/03/2007", 
+   "filtr": ["Комедия", "Боевик"]
 },{
    "id": "Taxi3",
    "backgroundImg": "http://94.241.168.136/films/Taxi3/trailer.gif",
@@ -327,7 +319,8 @@
    "films": "http://94.241.168.136/films/Taxi3/Taxi_3_HDRip__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 3 Такси 3 taxi 3 такси",
-   "date": "06/03/2003"
+   "date": "06/03/2003", 
+   "filtr": ["Комедия", "Боевик"]
 },{
    "id": "Taxi1",
    "backgroundImg": "http://94.241.168.136/films/Taxi1/trailer.gif",
@@ -340,7 +333,8 @@
    "films": "http://94.241.168.136/films/Taxi1/taksi.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 1 Такси 1 taxi 1 такси",
-   "date": "08/04/2001"
+   "date": "08/04/2001", 
+   "filtr": ["Комедия", "Боевик"]
 },{
    "id": "Taxi2",
    "backgroundImg": "http://94.241.168.136/films/Taxi2/trailer.gif",
@@ -353,7 +347,8 @@
    "films": "http://94.241.168.136/films/Taxi2/taksi-2.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Taxi 2 Такси 2 taxi 2 такси",
-   "date": "25/03/2000"
+   "date": "25/03/2000", 
+   "filtr": ["Комедия", "Боевик"]
 },{
    "id": "TheGodfather1974",
    "backgroundImg": "http://94.241.168.136/films/TheGodfather1974/trailer.gif",
@@ -366,7 +361,8 @@
    "films": "http://94.241.168.136/films/TheGodfather1974/The.Godfather.Part.2.1974__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Крестный Отец 2 крестный отец 2 the godfather 2",
-   "date": "20/11/1974"
+   "date": "20/11/1974", 
+   "filtr": ["Криминал", "Драма"]
 },{
    "id": "GreenMile",
    "backgroundImg": "http://94.241.168.136/films/GreenMile/trailer2.gif",
@@ -379,7 +375,8 @@
    "films": "http://94.241.168.136/films/GreenMile/zelenaya-milya-small.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Green Mile Зеленая Миля зеленая миля",
-   "date": "18/04/2000"
+   "date": "18/04/2000", 
+   "filtr": ["Криминал", "Фантастика","Драма"]
 }, {
       "id": "DjangoUnchained2012",
       "backgroundImg": "http://94.241.168.136/films/DjangoUnchained2012/trailer.mp4",
@@ -392,21 +389,9 @@
       "films": "http://94.241.168.136/videos/1564674844-disney.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "Django Unchained Джанго Освобожденный джанго освобожденный",
-      "date": "12/01/2013"
-   }, {
-      "id": "12Chairs1971",
-      "backgroundImg": "http://94.241.168.136/films/Avengers Infinity War/trailer.gif",
-      "cardImg": "http://94.241.168.136/films/12Chairs1971/poster.jpg",
-      "description": "Во время революции и последовавшего за ней краткого периода военного коммунизма многие прятали свои ценности как можно надежнее. И вот Ипполит Матвеевич Воробьянинов, бывший Старгородский предводитель дворянства и светский лев, а ныне — скромный делопроизводитель ЗАГСа, узнает от умирающей тещи, что некогда она спрятала свои бриллианты и жемчуга в общей сложности на 150 000 золотых рублей под обивку одного из двенадцати стульев гостиного гарнитура работы известного мастера Гамбса.",
-      "subTitle": "2015 • 1h 35m • Coming of Age, Family, Animation",
-      "title": "12 стульев",
-      "titleImg": "http://94.241.168.136/films/12Chairs1971/logo.png",
-      "type": "films",
-      "films": "https://www.youtube.com/watch?v=RZuynzRR81g",
-      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-      "name": "12 Стульев стульев",
-      "date": "12/01/1971"
-     },{ 
+      "date": "12/01/2013", 
+      "filtr": ["Боевик", "Драма"]
+   },{ 
       "id": "HolodnoeSerdce", 
    "backgroundImg": "http://94.241.168.136/cartoon/HolodnoeSerdce/trailer.gif", 
    "cardImg": "http://94.241.168.136/cartoon/HolodnoeSerdce/poster.jpg", 
@@ -419,7 +404,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
    "name": "Холодное Сердце холодное сердце",
    "date": "12/12/2013",
-   "universe": "disney"
+   "universe": "disney", 
+   "filtr": ["Детский", "Мюзикл"]
 	},{
       "id": "kunfupanda1",
       "backgroundImg": "http://94.241.168.136/cartoon/KunfuPanda1/trailer.gif",
@@ -432,7 +418,8 @@
       "films": "http://94.241.168.136/cartoon/KunfuPanda1/Kung_Fu_Panda_2008_720.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "Кунг-Фу Панда,кунг-фу панда, кунгфу, Кунгфу, кунг, Кунг",
-      "date": "15/05/2008"
+      "date": "15/05/2008", 
+      "filtr": ["Детский", "Комедия"]
    },{
       "id": "KakPriruchitDrakona",
    "backgroundImg": "http://94.241.168.136/cartoon/KakPriruchitDrakona/trailer.gif",
@@ -445,7 +432,8 @@
    "films": "http://94.241.168.136/cartoon/KakPriruchitDrakona/Kak_priruchit_drakona_2010_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Как приручить дракона, как приручить дракона",
-   "date": "18/03/2010"
+   "date": "18/03/2010", 
+   "filtr": ["Детский", "Фантастика"]
 
    },{
       "id": "KorolLev",
@@ -460,7 +448,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Король Лев, король лев",
    "date": "20/01/1995",
-   "universe":"disney" 
+   "universe":"disney" , 
+   "filtr": ["Детский", "Мюзикл"]
    },{
       "id": "Madagaskar",
    "backgroundImg": "http://94.241.168.136/cartoon/Madagaskar/trailer.gif",
@@ -473,7 +462,8 @@
    "films": "http://94.241.168.136/cartoon/Madagaskar/Madagaskar_2005_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Мадагаскар, мадагаскар",
-   "date": "27/05/2005"
+   "date": "27/05/2005", 
+   "filtr": ["Приключения", "Комедия"]
    },{
       "id": "LadybugCatNoirTheMovie",
    "backgroundImg": "http://94.241.168.136/cartoon/LadybugCatNoirTheMovie/trailer.gif",
@@ -486,7 +476,8 @@
    "films": "http://94.241.168.136/cartoon/LadybugCatNoirTheMovie/Ledi_bag_i_super_kot_Probuzhdenie_sily_2023_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Леди Баг и Супер-Кот: Пробуждение сил, леди баг, Леди баг",
-   "date": "17/08/2023"
+   "date": "17/08/2023", 
+   "filtr": ["Детский", "Мюзикл"]
    },{
       "id": "MonsterINC",
    "backgroundImg": "http://94.241.168.136/cartoon/MonsterINC/trailer.gif",
@@ -500,7 +491,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Корпорация монстров,корпорация монстров",
    "date": "22/03/2002",
-   "universe":"disney"
+   "universe":"disney", 
+   "filtr": ["Приключения", "Комедия"]
    },{
       "id": "MonstryNaKanikulah",
    "backgroundImg": "http://94.241.168.136/cartoon/MonstryNaKanikulah/trailer.gif",
@@ -513,7 +505,8 @@
    "films": "http://94.241.168.136/cartoon/MonstryNaKanikulah/Monsrty.na.kanikulah.2012.D.BD__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Монстры на каникулах,монстры на каникулах",
-   "date": "22/03/2002"
+   "date": "22/03/2002", 
+   "filtr": ["Приключения", "Комедия"]
    },{
       "id": "Ostrovsokrovih",
    "backgroundImg": "http://94.241.168.136/cartoon/Ostrovsokrovih/trailer.gif",
@@ -526,7 +519,8 @@
    "films": "http://94.241.168.136/cartoon/Ostrovsokrovih/Ostrov_sokrovish_1988_bdrip_720_kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Остров сокровищ, остров сокровищ",
-   "date": "24/10/1988"
+   "date": "24/10/1988", 
+   "filtr": ["Приключения", "Комедия"]
    },{
       "id": "Ratatui",
    "backgroundImg": "http://94.241.168.136/cartoon/Ratatui/trailer.gif",
@@ -540,7 +534,8 @@
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Рататуй, рататуй",
    "date": "29/06/1007",
-   "universe":"disney"
+   "universe":"disney", 
+   "filtr": ["Приключения", "Комедия"]
    },{
       "id": "Shrek",
    "backgroundImg": "http://94.241.168.136/cartoon/Shrek/trailer.gif",
@@ -553,7 +548,8 @@
    "films": "http://94.241.168.136/cartoon/Shrek/Shrek.2001__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Шрек, шрек",
-   "date": "31/10/2001"
+   "date": "31/10/2001", 
+   "filtr": ["Фантастикаа", "Комедия"]
    },{
       "id": "Spider-ManAcrossTheSpider-Verse",
    "backgroundImg": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/logo.gif",
@@ -566,7 +562,8 @@
    "films": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/Chelovek_pauk_cherez_vselennie_2018_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Человек-паук: Паутина вселенных, человек-паук: Паутина вселенных, Человек-паук Паутина вселенных, Человек-паук паутина вселенных",
-   "date": "12/05/2023"
+   "date": "12/05/2023", 
+   "filtr": ["Боевик", "Комедия","Криминал"]
    },{
       "id": "Spider-ManIntoTheSpider-Verse",
    "backgroundImg": "http://94.241.168.136/cartoon/Spider-ManIntoTheSpider-Verse/trailer.gif",
@@ -579,7 +576,8 @@
    "films": "http://94.241.168.136/cartoon/Spider-ManIntoTheSpider-Verse/Chelovek_pauk_Pautina_vselennih_2023_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Человек-паук: Через вселенных, человек-паук: Через вселенные, Человек-паук Через вселенные, Человек-паук через вселенные ",
-   "date": "13/12/2018"
+   "date": "13/12/2018", 
+   "filtr": ["Боевик", "Комедия","Криминал"]
    },{
       "id": "Tachki",
    "backgroundImg": "http://94.241.168.136/cartoon/Tachki/trailer.gif",
@@ -592,7 +590,8 @@
    "films": "http://94.241.168.136/cartoon/Tachki/Tachki_2006_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Тачки, тачки ",
-   "date": "15/06/2006"
+   "date": "15/06/2006", 
+   "filtr": ["Фантастикаа", "Комедия"]
    },{
       "id": "Tachki2",
    "backgroundImg": "http://94.241.168.136/cartoon/Tachki2/trailer.gif",
@@ -605,7 +604,8 @@
    "films": "http://94.241.168.136/cartoon/Tachki2/Tachki_2_2011_720-kinovasek.net.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Тачки, тачки, Тачки 2, тачки 2",
-   "date": "23/05/2011"
+   "date": "23/05/2011", 
+   "filtr": ["Фантастикаа", "Комедия"]
    },{
       "id": "TainaKoko",
       "backgroundImg": "http://94.241.168.136/cartoon/TainaKoko/trailer.gif",
@@ -618,7 +618,8 @@
       "films": "http://94.241.168.136/cartoon/TainaKoko/Tayna_koko_2017_720_kinovasek.net.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "тайны коко, Тайны коко, Тайны Коко, тайны Коко",
-      "date": "23/11/2017"   
+      "date": "23/11/2017" , 
+      "filtr": ["Фантастикаа", "Комедия","Мюзикл","Приключения"]  
    },{
       "id": "Valli",
       "backgroundImg": "http://94.241.168.136/cartoon/Valli/trailer.gif",
@@ -631,7 +632,8 @@
       "films": "http://94.241.168.136/cartoon/Valli/WALL-E.2008___Kinosimka.RU.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "ВАЛЛ-И, валл-и, валли,",
-      "date": "03/07/2008"   
+      "date": "03/07/2008" , 
+      "filtr": ["Фантастикаа", "Приключения"]
    },{
       "id": "Zveropolis",
       "backgroundImg": "http://94.241.168.136/cartoon/Zveropolis/trailer.gif",
@@ -645,6 +647,7 @@
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "тайны коко, Тайны коко, Тайны Коко, тайны Коко",
       "date": "03/03/2016",
-      "universe":"disney" 
+      "universe":"disney", 
+      "filtr": ["Приключения", "Комедия","Криминал"]
    }
 ]
