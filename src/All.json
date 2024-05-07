@@ -110,6 +110,7 @@
    "films": "http://94.241.168.136/films/OneFlewOverTheCuckoo'sNest/Proletaya.Nad.Gnezdom.Kukushki.1975__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Пролетая над гнездом кукушки, пролетая над гнездом кукушки", 
+   "date": "01/03/1976",
    "filtr": ["Драма", "Триллер"] 
 },{
    "id": "Ocean'sTwelve",
@@ -264,6 +265,7 @@
    "films": "http://94.241.168.136/films/GoodWillHunting/Ymnica_Will_Hunting__Kinosimka.RU.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Умница Уилл Хантинг, умница" , 
+   "date": "05/12/1997",
    "filtr": ["Романтика", "Триллер"]
 },{
    "id": "1+1",
@@ -533,7 +535,7 @@
    "films": "http://94.241.168.136/cartoon/Ratatui/Ratatuj_2007_720.mp4",
    "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
    "name": "Рататуй, рататуй",
-   "date": "29/06/1007",
+   "date": "8/07/2007",
    "universe":"disney", 
    "filtr": ["Приключения", "Комедия"]
    },{

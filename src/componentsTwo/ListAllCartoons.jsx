@@ -43,7 +43,6 @@ const ListAllCartoons = () => {
     if (!a.date || !b.date) {
       return 0;
     }
-
     const dateA = new Date(
       parseInt(a.date.split("/")[2]),
       parseInt(a.date.split("/")[1]) - 1,
@@ -54,8 +53,9 @@ const ListAllCartoons = () => {
       parseInt(b.date.split("/")[1]) - 1,
       parseInt(b.date.split("/")[0])
     );
-    return dateB - dateA;
+    return dateB - dateA; // меняем местами dateA и dateB
   });
+  
 
   const chooseRandomMovie = () => {
     const randomIndex = Math.floor(Math.random() * sortedMovies.length);

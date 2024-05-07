@@ -52,6 +52,34 @@
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "Кунг-Фу Панда,кунг-фу панда, кунгфу, Кунгфу, кунг, Кунг",
       "date": "15/05/2008"
+   },
+   { 
+      "id": "HolodnoeSerdce", 
+   "backgroundImg": "http://94.241.168.136/cartoon/HolodnoeSerdce/trailer.gif", 
+   "cardImg": "http://94.241.168.136/cartoon/HolodnoeSerdce/poster.jpg", 
+   "description": "Когда древнее предсказание сбывается и королевство погружается в объятия вечной зимы, трое бесстрашных героев — принцесса Анна, отважный Кристофф и его верный олень Свен — отправляются в горы, чтобы найти сестру Анны, Эльзу, которая может снять со страны леденящее заклятие. По пути их ждет множество увлекательных сюрпризов и захватывающих приключений: встреча с мистическими троллями, знакомство с очаровательным снеговиком по имени Олаф, горные вершины покруче Эвереста и магия в каждой снежинке. Анне и Кристоффу предстоит сплотиться и противостоять могучей стихии, чтобы спасти королевство и тех, кто им дорог.", 
+   "subTitle": "2013 г. ‧ Детский/Мюзикл ‧ 1 ч 42 мин", 
+   "title": "Холодное сердце", 
+   "titleImg": "http://94.241.168.136/cartoon/HolodnoeSerdce/logo.png", 
+   "type": "original",
+   "films": "http://94.241.168.136/cartoon/HolodnoeSerdce/film.mp4", 
+   "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M", 
+   "name": "Холодное Сердце холодное сердце",
+   "date": "12/12/2013"
+	},
+   {
+      "id": "Spider-ManAcrossTheSpider-Verse",
+   "backgroundImg": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/logo.gif",
+   "cardImg": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/poster.jpg",
+   "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
+   "subTitle": "2023 г. ‧ Боевик/Комедия ‧ 2 ч 20 мин",
+   "title": "Человек-паук: Паутина вселенных",
+   "titleImg": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/logo.png",
+   "type": "original",
+   "films": "http://94.241.168.136/cartoon/Spider-ManAcrossTheSpider-Verse/Chelovek_pauk_cherez_vselennie_2018_720-kinovasek.net.mp4",
+   "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+   "name": "Человек-паук: Паутина вселенных, человек-паук: Паутина вселенных, Человек-паук Паутина вселенных, Человек-паук паутина вселенных",
+   "date": "12/05/2023"
    }
 
 ]

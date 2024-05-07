@@ -4,11 +4,17 @@ import { useParams } from 'react-router-dom';
 import disneyFilms from '../disneyPlusMoviesData';
 import All from '../All';
 
+const formatTime = (timeInSeconds) => {
+  const minutes = Math.floor(timeInSeconds / 60);
+  const seconds = Math.floor(timeInSeconds % 60);
+  return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+};
+
 const Detail = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
-  const [showModal, setShowModal] = useState(false);
   const [videoPlayed, setVideoPlayed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const videoRef = useRef(null);
 
@@ -22,90 +28,64 @@ const Detail = () => {
 
   useEffect(() => {
     const storedTime = localStorage.getItem('videoCurrentTime');
-    const storedModalState = localStorage.getItem('showModal');
-    
-    if (storedTime && storedModalState) {
+    if (storedTime) {
       setCurrentTime(parseFloat(storedTime));
-      setShowModal(storedModalState === 'true');
-    } else {
-      setShowModal(false);
     }
   }, []);
-
-  useEffect(() => {
-    if (showModal) {
-      videoRef.current.currentTime = currentTime;
-      videoRef.current.play();
-    } else {
-      localStorage.removeItem('videoCurrentTime');
-    }
-  }, [showModal]);
 
   const handlePlay = () => {
-    setVideoPlayed(true);
-    setShowModal(true);
+    if (!videoPlayed) {
+      setVideoPlayed(true);
+      videoRef.current.play();
+    } else {
+      if (collapsed) {
+        setCollapsed(false);
+        videoRef.current.currentTime = currentTime;
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+        setCollapsed(true);
+      }
+    }
   };
 
-  useEffect(() => {
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.addEventListener('play', handlePlay);
-    }
-
-    return () => {
-      if (videoElement) {
-        videoElement.removeEventListener('play', handlePlay);
-      }
-    };
-  }, []);
-
-  const openModal = () => setShowModal(true);
-
-  const closeModal = () => {
-    if (videoPlayed) {
+  const handleTimeUpdate = () => {
+    if (videoPlayed && !collapsed) {
       setCurrentTime(videoRef.current.currentTime);
       localStorage.setItem('videoCurrentTime', videoRef.current.currentTime.toString());
     }
-    setShowModal(false);
-    localStorage.setItem('showModal', 'false');
   };
 
   const ClickTrailer = () => {
     window.open(detailData.trailer, '_blank');
   };
 
-  const buttonText = videoPlayed ? "Продолжить просмотр" : "Пауза";
+  const buttonText = collapsed ? (videoPlayed ? `Продолжить просмотр (${formatTime(currentTime)})` : "Play") : (videoPlayed ? "Play" : "Play");
+
+  const handleClose = () => {
+    if (videoPlayed) {
+      setVideoPlayed(false);
+      setCollapsed(false);
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      localStorage.removeItem('videoCurrentTime');
+    }
+  };
 
   return (
     <Container>
-      {showModal && (
-        <Modal>
-          <CloseModalButton onClick={closeModal}>X</CloseModalButton>
-          <VideoWrapper>
-            <VideoFrame>
-              <video
-                ref={videoRef}
-                controls
-                onPause={() => {}}
-              >
-                <source src={detailData.films} type="video/mp4" />
-                Ваш браузер не поддерживает видео.
-              </video>
-            </VideoFrame>
-          </VideoWrapper>
-        </Modal>
-      )}
+      <Background>
+        <img alt={detailData.title} src={detailData.backgroundImg} />
+      </Background>
       <Content>
         <ImageTitle>
           <img alt={detailData.title} src={detailData.titleImg} />
         </ImageTitle>
         <Controls>
-          { !showModal && (
-            <Player onClick={openModal}>
-              <img src="http://94.241.168.136/default/images/play-icon-black.png" alt="" />
-              <span>Play</span>
-            </Player>
-          )}
+          <Player onClick={handlePlay}>
+            <img src="http://94.241.168.136/default/images/play-icon-black.png" alt="" />
+            <span>{buttonText}</span>
+          </Player>
           <Trailer onClick={ClickTrailer}>
             <img src="http://94.241.168.136/default/images/play-icon-white.png" alt="" />
             <span>Trailer</span>
@@ -120,14 +100,27 @@ const Detail = () => {
             </div>
           </GroupWatch>
         </Controls>
+        <SubTitle>{detailData.subTitle}</SubTitle>
+        {videoPlayed && (
+          <>
+            <VideoFrame>
+              <video
+                ref={videoRef}
+                controls
+                onPause={handlePlay}
+                onTimeUpdate={handleTimeUpdate}
+              >
+                <source src={detailData.films} type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
+              <CloseButton onClick={handleClose}>X</CloseButton>
+            </VideoFrame>
+          </>
+        )}
         <DescriptionContainer>
-          <SubTitle>{detailData.subTitle}</SubTitle>
           <Description>{detailData.description}</Description>
         </DescriptionContainer>
       </Content>
-      <Background>
-        <img alt={detailData.title} src={detailData.backgroundImg} />
-      </Background>
     </Container>
   );
 };
@@ -168,7 +161,7 @@ const ImageTitle = styled.div`
   img {
     position: absolute;
     bottom: 20px;
-    max-width: 600px;
+    max-width: 70%;
     min-width: 200px;
     width: 35vw;
   }
@@ -179,6 +172,7 @@ const ImageTitle = styled.div`
       position: static;
       bottom: auto;
       margin-top: 30%;
+      width: 50%;
     }
   }
 `;
@@ -285,18 +279,19 @@ const GroupWatch = styled.div`
   }
 `;
 
+const SubTitle = styled.div`
+  color: rgb(249, 249, 249);
+  font-size: 15px;
+  min-height: 20px;
+  margin-top: 20px;
+`;
+
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
   text-align: left;
   z-index: 1;
-`;
-
-const SubTitle = styled.div`
-  color: rgb(249, 249, 249);
-  font-size: 15px;
-  min-height: 20px;
 `;
 
 const Description = styled.div`
@@ -310,21 +305,19 @@ const Description = styled.div`
   }
 `;
 
-const Modal = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+const VideoFrame = styled.div`
+  border: 1px solid #fff;
   border-radius: 20px;
+  margin-top: 20px;
+  position: relative;
+  
+  video {
+    border-radius: 20px;
+    width: 100%;
+  }
 `;
 
-const CloseModalButton = styled.button`
+const CloseButton = styled.button`
   position: absolute;
   top: 10px;
   right: 10px;
@@ -333,38 +326,6 @@ const CloseModalButton = styled.button`
   cursor: pointer;
   font-size: 24px;
   color: #fff;
-`;
-
-const VideoWrapper = styled.div`
-  width: 100%;
-  height: 70vh;
-  text-align: center;
-  border-radius: 20px;
-  overflow: hidden;
-`;
-
-const VideoFrame = styled.div`
-  border: 1px solid #fff;
-  border-radius: 20px;
-`;
-
-const ContinueButton = styled(Player)`
-  padding: 10px 20px;
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  &:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-`;
-
-const ContinueButtonOverlay = styled(ContinueButton)`
-  background-color: transparent;
-  border-color: transparent;
-  color: transparent;
-  pointer-events: none;
 `;
 
 export default Detail;
