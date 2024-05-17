@@ -1,49 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
+<html lang="ru"> <!-- Язык страницы указан как русский -->
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семейный Онлайн Кинотеатр NEXT-KINO</title>
-    <!-- Ваши дополнительные мета-теги и другие теги -->
-</head>
-<body>
-    <div id="root">
-        <!-- Здесь будет отображаться информация о фильмах -->
-    </div>
+    <meta name="description" content="Онлайн-кинотеатр NEXT — это премьеры фильмов и сериалов в хорошем качестве без подписки. Смотрите интернет-кинотеатр NEXT на любых устройствах: смартфонах, планшетах, компьютерах и Smart TV. Наслаждайтесь безопасным и увлекательным просмотром всей семьей." />
 
-    <script>
-        // Загружаем данные о фильмах из файла All.json
-        fetch('All.json')
-            .then(response => response.json())
-            .then(data => {
-                // Получаем ссылку на блок #root
-                const rootElement = document.getElementById('root');
+    <meta name="keywords" content="онлайн кинотеатр, кино, сериалы, премьеры, семейный, бесплатно, качество, безопасность, Smart TV" />
+    <meta name="author" content="Ваше имя или название компании" />
 
-                // Создаем элементы для каждого фильма и добавляем их в #root
-                data.forEach(movie => {
-                    // Создаем блок для фильма
-                    const movieElement = document.createElement('div');
-                    movieElement.classList.add('movie');
-
-                    // Добавляем заголовок фильма
-                    const titleElement = document.createElement('h2');
-                    titleElement.textContent = movie.title;
-                    movieElement.appendChild(titleElement);
-
-                    // Добавляем подзаголовок фильма
-                    const subTitleElement = document.createElement('p');
-                    subTitleElement.textContent = movie.subTitle;
-                    movieElement.appendChild(subTitleElement);
-
-                    // Добавляем описание фильма
-                    const descriptionElement = document.createElement('p');
-                    descriptionElement.textContent = movie.description;
-                    movieElement.appendChild(descriptionElement);
-
-                    // Добавляем элемент фильма в #root
-                    rootElement.appendChild(movieElement);
-                });
-            })
-            .catch(error => console.error('Ошибка загрузки данных:', error));
-    </script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
