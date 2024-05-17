@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Carousel = styled(Slider)`
-  margin-top: 20px;
 
   & > button {
     opacity: 0;
