@@ -44,12 +44,12 @@ const Recommends = () => {
             onTouchStart={handleMobileTouchStart}
             onTouchEnd={handleMobileTouchEnd}
           >
-            <img src="http://94.241.168.136/default/images/AllFilms.png" alt="" />
+            <img src="https://singleton-website.ru/default/images/AllFilms.png" alt="" />
             <Video
               autoPlay={true}
               loop={true}
               playsInline={true}
-              src="http://94.241.168.136/default/video/AllFilms.mp4"
+              src="https://singleton-website.ru/default/video/AllFilms.mp4"
               type="video/mp4"
               isVisible={isHovered || isVideoPlaying}
             />

@@ -72,15 +72,15 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo href="/">
-        <img src="http://94.241.168.136/default/images/icon1-next.png" alt="HOME" />
+        <img src="https://singleton-website.ru/default/images/icon1-next.png" alt="HOME" />
       </Logo>
 {/*       <NavMenu>
         <NavItem href="/movies">
-          <img src="http://94.241.168.136/default/images/movie-icon.svg" alt="MOVIES" />
+          <img src="https://singleton-website.ru/default/images/movie-icon.svg" alt="MOVIES" />
           <span>MOVIES</span>
         </NavItem>
         <NavItem href="/series">
-          <img src="http://94.241.168.136/default/images/series-icon.svg" alt="SERIES" />
+          <img src="https://singleton-website.ru/default/images/series-icon.svg" alt="SERIES" />
           <span>SERIES</span>
         </NavItem>
       </NavMenu> */}
@@ -96,7 +96,7 @@ const Header = (props) => {
       </SearchContainer>
       {/* <Login onClick={handleAuth}>{userName ? "Logout" : "Login"}</Login> */}
       <RightLogo href="https://majestic-network.org">
-        <img src="http://94.241.168.136/default/images/network.png" alt="SECOND LOGO" />
+        <img src="https://singleton-website.ru/default/images/network.png" alt="SECOND LOGO" />
       </RightLogo>
     </Nav>
   );
@@ -265,7 +265,7 @@ const SearchButton = styled.button`
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  background-image: url('http://94.241.168.136/default/images/search.png');
+  background-image: url('https://singleton-website.ru/default/images/search.png');
   background-size: cover;
   width: 20px;
   height: 20px;

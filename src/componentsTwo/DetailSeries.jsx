@@ -262,12 +262,12 @@ const Detail = () => {
       <ContentMeta>
         <Controls>
           <Player onClick={toggleVideo}>
-            <img src="http://94.241.168.136/default/images/play-icon-black.png" alt="" />
+            <img src="https://singleton-website.ru/default/images/play-icon-black.png" alt="" />
             <span>Play</span>
           </Player>
 
           <Trailer onClick={clickTrailer}>
-            <img src="http://94.241.168.136/default/images/play-icon-white.png" alt="" />
+            <img src="https://singleton-website.ru/default/images/play-icon-white.png" alt="" />
             <span>Trailer</span>
           </Trailer>
           <AddList>
@@ -276,7 +276,7 @@ const Detail = () => {
           </AddList>
           <GroupWatch>
             <div>
-              <img src="http://94.241.168.136/default/images/group-icon.png" alt="" />
+              <img src="https://singleton-website.ru/default/images/group-icon.png" alt="" />
             </div>
           </GroupWatch>
         </Controls>

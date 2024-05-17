@@ -83,25 +83,25 @@ const ImgSlider = (props) => {
     <Carousel {...settings}>
       <Wrap>
         <a>
-          <img src="http://94.241.168.136/default/images/slider-badging.jpg" alt="" />
+          <img src="https://singleton-website.ru/default/images/slider-badging.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="http://94.241.168.136/default/images/slider-scale.jpg" alt="" />
+          <img src="https://singleton-website.ru/default/images/slider-scale.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="http://94.241.168.136/default/images/slider-badag.jpg" alt="" />
+          <img src="https://singleton-website.ru/default/images/slider-badag.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="http://94.241.168.136/default/images/slider-scales.jpg" alt="" />
+          <img src="https://singleton-website.ru/default/images/slider-scales.jpg" alt="" />
         </a>
       </Wrap>
     </Carousel>
