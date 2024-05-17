@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { auth, provider } from "../firebase";
 import { setUserLoginDetails, setSignOutState } from "../features/user/userSlice";
 import allData from "../All.json";
 
@@ -12,45 +11,6 @@ const Header = (props) => {
   const { name: userName, photo } = useSelector((state) => state.user);
   const [textInput, setTextInput] = useState(""); // Состояние текстового поля
 
-  useEffect(() => {
-    auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        setUser(user);
-        history("/home");
-      }
-    });
-  }, [history]);
-
-  const handleAuth = () => {
-    if (!userName) {
-      auth
-        .signInWithPopup(provider)
-        .then((result) => {
-          setUser(result.user);
-        })
-        .catch((error) => {
-          alert(error.message);
-        });
-    } else if (userName) {
-      auth
-        .signOut()
-        .then(() => {
-          dispatch(setSignOutState());
-          history("/");
-        })
-        .catch((err) => alert(err.message));
-    }
-  };
-
-  const setUser = (user) => {
-    dispatch(
-      setUserLoginDetails({
-        name: user.displayName,
-        email: user.email,
-        photo: user.photoURL,
-      })
-    );
-  };
 
   const handleTextChange = (event) => {
     setTextInput(event.target.value);

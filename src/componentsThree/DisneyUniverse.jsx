@@ -2,7 +2,6 @@ import styled from "styled-components";
 import ImgSlider from "./ImgSliderAllFilms";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import db from "../firebase";
 import { setMovies } from "../features/movie/movieSlice";
 
 

@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
-    "firebase": "^10.7.2",
-    "firebase-tools": "^13.1.0",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
@@ -33,6 +31,9 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.8"
+    "sharp": "^0.33.4",
+    "svgo": "^3.3.2",
+    "vite": "^5.0.8",
+    "vite-plugin-image-optimizer": "^1.1.7"
   }
 }
