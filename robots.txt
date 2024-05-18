@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+
+# Allow access to the rest of the site
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.next-kino.ru/sitemap.xml
