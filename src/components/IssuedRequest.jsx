@@ -34,7 +34,7 @@ const Container = styled.main`
   color: #fff;
 
   &:after {
-    background: url("https://singleton-website.ru/default/images/home-background.png") center center / 100% 100% no-repeat fixed;
+    background: url("http://5.144.98.17:8080/d1/default/images/home-background.png") center center / 100% 100% no-repeat fixed;
     content: "";
     position: fixed;
     inset: 0px;

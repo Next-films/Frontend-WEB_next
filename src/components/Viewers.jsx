@@ -7,50 +7,50 @@ const Viewers = (props) => {
     <Container>
       <Link to="/disneyuniverse">
         <Wrap>
-          <img src="https://singleton-website.ru/default/images/viewers-disney.png" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/viewers-disney.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="https://singleton-website.ru/default/video/1564674844-disney.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/video/1564674844-disney.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
       </Link>
       <Link to="/pixaruniverse">
         <Wrap>
-          <img src="https://singleton-website.ru/default/images/viewers-pixar.png" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/viewers-pixar.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="https://singleton-website.ru/default/video/1564676714-pixar.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/video/1564676714-pixar.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
       </Link>
       <Link to="/marveluniverse">
         <Wrap>
-          <img src="https://singleton-website.ru/default/images/viewers-marvel.png" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/viewers-marvel.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="https://singleton-website.ru/default/video/1564676115-marvel.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/video/1564676115-marvel.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
       </Link>
       <Link to="/starwarsuniverse">
         <Wrap>
-          <img src="https://singleton-website.ru/default/images/viewers-starwars.png" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/viewers-starwars.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="https://singleton-website.ru/default/video/1608229455-star-wars.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/video/1608229455-star-wars.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
       </Link>
       <Link to="/allseries">
         <Wrap>
-          <img src="https://singleton-website.ru/default/images/dc.png" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/dc.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="https://singleton-website.ru/default/video/dcintro.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/video/dcintro.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>

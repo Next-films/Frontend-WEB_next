@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectFilms } from "../features/movie/movieSlice";
+import { selectSeries } from "../features/movie/movieSlice";
 
-const ListAllFilm = () => {
-  const movies = useSelector(selectFilms);
+const ListAllSeries = () => {
+  const movies = useSelector(selectSeries);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [randomMovie, setRandomMovie] = useState(null);
   const [showRemainingGenres, setShowRemainingGenres] = useState(false);
@@ -109,14 +109,14 @@ const ListAllFilm = () => {
       <Content>
         {randomMovie ? (
           <Wrap>
-            <Link to={`/detail/${randomMovie.id}`}>
+            <Link to={`/detailseries/${randomMovie.id}`}>
               <img src={randomMovie.cardImg} alt={randomMovie.title} />
             </Link>
           </Wrap>
         ) : (
           sortedMovies.map((movie, key) => (
             <Wrap key={key}>
-              <Link to={`/detail/${movie.id}`}>
+              <Link to={`/detailseries/${movie.id}`}>
                 <img src={movie.cardImg} alt={movie.title} />
               </Link>
             </Wrap>
@@ -201,4 +201,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default ListAllFilm;
+export default ListAllSeries;

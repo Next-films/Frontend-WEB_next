@@ -1,14 +1,132 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import disneyFilms from '../disneyPlusMoviesData';
-import All from '../All';
+import All from '../All.json'; // Используем .json файл
+
+const SeriesDetail = () => {
+  const { id } = useParams();
+  const [detailData, setDetailData] = useState({});
+  const [videoPlayed, setVideoPlayed] = useState(false);
+  const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(null);
+  const [filmsArray, setFilmsArray] = useState([]);
+  const [showVideo, setShowVideo] = useState(false);
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    if (id) {
+      const combinedData = [...disneyFilms, ...All];
+      const foundSeries = combinedData.find(series => series.id === id);
+      if (foundSeries) {
+        setDetailData(foundSeries);
+        setFilmsArray(
+          foundSeries.films.map(film => ({
+            videoUrl: film.videoUrl,
+            previewUrl: film.previewUrl,
+          })) || []
+        );
+      } else {
+        console.error('Сериал не найден');
+      }
+    }
+  }, [id]);
+
+  const handlePlay = useCallback(() => {
+    setVideoPlayed(true);
+  }, []);
+
+  const handleEpisodeChange = useCallback((index) => {
+    setCurrentEpisodeIndex(index);
+    setShowVideo(true); // Показываем видео плеер
+  }, []);
+
+  const handleTrailerClick = useCallback(() => {
+    window.open(detailData.trailer, '_blank');
+  }, [detailData.trailer]);
+
+  const buttonText = videoPlayed ? "Выбрать эпизод" : "Play";
+
+  const scroll = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = direction === 'left' ? -300 : 300;
+      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <Container>
+      <Background>
+        <img alt={detailData.title} src={detailData.backgroundImg} />
+      </Background>
+      <Content>
+        <ImageTitle>
+          <img alt={detailData.title} src={detailData.titleImg} />
+        </ImageTitle>
+        <Controls>
+          <Player onClick={handlePlay}>
+            <img src="http://5.144.98.17:8080/d1/default/images/play-icon-black.png" alt="" />
+            <span>{buttonText}</span>
+          </Player>
+          <Trailer onClick={handleTrailerClick}>
+            <img src="http://5.144.98.17:8080/d1/default/images/play-icon-white.png" alt="" />
+            <span>Trailer</span>
+          </Trailer>
+          <AddList>
+            <span />
+            <span />
+          </AddList>
+          <GroupWatch>
+            <div>
+              <img src="http://5.144.98.17:8080/d1/default/images/group-icon.png" alt="" />
+            </div>
+          </GroupWatch>
+        </Controls>
+        <SubTitle>{detailData.subTitle}</SubTitle>
+        {videoPlayed && filmsArray.length > 0 && (
+          <CarouselWrapper>
+            <ScrollButton className="left" onClick={() => scroll('left')}>
+              &lt;
+            </ScrollButton>
+            <Carousel ref={carouselRef}>
+              {filmsArray.map((film, index) => (
+                <EpisodeWrap key={index} onClick={() => handleEpisodeChange(index)}>
+                  {showVideo && currentEpisodeIndex === index ? (
+                    <VideoPlayer
+                      src={film.videoUrl}
+                      controls
+                      autoPlay
+                      onClick={() => setShowVideo(false)} // Скрываем видео при клике
+                    />
+                  ) : (
+                    <VideoPreview
+                      src={film.previewUrl}
+                      alt={`Episode ${index + 1}`}
+                    />
+                  )}
+                </EpisodeWrap>
+              ))}
+            </Carousel>
+            <ScrollButton className="right" onClick={() => scroll('right')}>
+              &gt;
+            </ScrollButton>
+          </CarouselWrapper>
+        )}
+        <DescriptionContainer>
+          <Description>{detailData.description}</Description>
+        </DescriptionContainer>
+      </Content>
+    </Container>
+  );
+};
+
+// Styled components
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-left: 20px; /* Расстояние от края экрана до содержимого */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 `;
 
 const Background = styled.div`
@@ -39,7 +157,7 @@ const ImageTitle = styled.div`
   img {
     position: absolute;
     bottom: 20px;
-    max-width: 600px;
+    max-width: 70%;
     min-width: 200px;
     width: 35vw;
   }
@@ -50,7 +168,24 @@ const ImageTitle = styled.div`
       position: static;
       bottom: auto;
       margin-top: 30%;
+      width: 50%;
     }
+  }
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+  height: 100%;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    padding: 10px;
   }
 `;
 
@@ -60,11 +195,12 @@ const Controls = styled.div`
   flex-flow: row nowrap;
   margin: 24px 0px;
   min-height: 56px;
+  position: relative;
 `;
 
 const Player = styled.button`
   font-size: 15px;
-  margin: 0px 22px 0px 0px;
+  margin-right: 22px;
   padding: 0px 24px;
   height: 56px;
   border-radius: 4px;
@@ -141,8 +277,17 @@ const GroupWatch = styled.div`
 
 const SubTitle = styled.div`
   color: rgb(249, 249, 249);
-  font-size: 15px;
+  font-size: 20px;
   min-height: 20px;
+  margin-bottom: 16px;
+`;
+
+const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: left;
+  z-index: 1;
 `;
 
 const Description = styled.div`
@@ -156,151 +301,80 @@ const Description = styled.div`
   }
 `;
 
-const ContentMeta = styled.div`
-  /* Add your styles here */
-`;
-
-const VideoWrapper = styled.div`
-  width: 100%;
-  overflow-x: auto;
+const CarouselWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  padding: 20px;
-
-  cursor: grab;
-  user-select: none;
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
 `;
 
-const Video = styled.video`
-  width: 350px;
-  margin-right: 20px;
-  border-radius: 10px;
-
-  @media (max-width: 768px) {
-    width: 250px;
+const Carousel = styled.div`
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  flex: 1;
+  
+  &::-webkit-scrollbar {
+    display: none;
   }
 `;
 
-const Detail = () => {
-  const { id } = useParams();
-  const [detailData, setDetailData] = useState({});
-  const [showVideo, setShowVideo] = useState(false);
-  const videoWrapperRef = useRef(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStartX, setDragStartX] = useState(0);
-  const [scrollStartX, setScrollStartX] = useState(0);
+const EpisodeWrap = styled.div`
+  position: relative;
+  width: 300px; /* Увеличиваем ширину плашек */
+  height: 170px; /* Увеличиваем высоту плашек */
+  flex: 0 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 250ms ease;
+  border: 3px solid rgba(249, 249, 249, 0.1);
 
-  useEffect(() => {
-    if (id) {
-      const disneyFilm = disneyFilms.find(film => film.id === id);
-      const allFilm = All.find(film => film.id === id);
-      const films = disneyFilm ? [disneyFilm] : [];
-      if (allFilm && !films.some(film => film.id === allFilm.id)) {
-        films.push(allFilm);
-      }
-      setDetailData(films[0]);
-    }
-  }, [id]);
+  &:hover {
+    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px, rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+    transform: scale(1.05);
+    border-color: rgba(249, 249, 249, 0.8);
+  }
+`;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!isDragging && videoWrapperRef.current) {
-        setScrollPosition(videoWrapperRef.current.scrollLeft);
-      }
-    };
+const VideoPreview = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
-    if (videoWrapperRef.current) {
-      videoWrapperRef.current.addEventListener('scroll', handleScroll);
-    }
+const ScrollButton = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    return () => {
-      if (videoWrapperRef.current) {
-        videoWrapperRef.current.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, [isDragging]);
+  &.left {
+    left: 10px;
+  }
 
-  const handleMouseDown = event => {
-    setIsDragging(true);
-    setDragStartX(event.clientX);
-    setScrollStartX(videoWrapperRef.current.scrollLeft);
-  };
+  &.right {
+    right: 10px;
+  }
+`;
 
-  const handleMouseMove = event => {
-    if (!isDragging) return;
-    const dragDistance = event.clientX - dragStartX;
-    videoWrapperRef.current.scrollLeft = scrollStartX - dragDistance;
-  };
+const VideoPlayer = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const toggleVideo = () => {
-    if (detailData.films && detailData.films.length > 0 && !showVideo) {
-      setShowVideo(true);
-    } else {
-      setShowVideo(prevState => !prevState);
-    }
-  };
-
-  const clickTrailer = () => {
-    window.open(detailData.trailer, '_blank');
-  };
-
-  return (
-    <Container>
-      <Background>
-        <img alt={detailData.title} src={detailData.backgroundImg} />
-      </Background>
-
-      <ImageTitle>
-        <img alt={detailData.title} src={detailData.titleImg} />
-      </ImageTitle>
-      <ContentMeta>
-        <Controls>
-          <Player onClick={toggleVideo}>
-            <img src="https://singleton-website.ru/default/images/play-icon-black.png" alt="" />
-            <span>Play</span>
-          </Player>
-
-          <Trailer onClick={clickTrailer}>
-            <img src="https://singleton-website.ru/default/images/play-icon-white.png" alt="" />
-            <span>Trailer</span>
-          </Trailer>
-          <AddList>
-            <span />
-            <span />
-          </AddList>
-          <GroupWatch>
-            <div>
-              <img src="https://singleton-website.ru/default/images/group-icon.png" alt="" />
-            </div>
-          </GroupWatch>
-        </Controls>
-        <SubTitle>{detailData.subTitle}</SubTitle>
-        <Description>{detailData.description}</Description>
-      </ContentMeta>
-
-      {showVideo && (
-        <VideoWrapper
-          ref={videoWrapperRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}>
-          {detailData.films &&
-            detailData.films.map((video, index) => (
-              <Video key={index} controls onEnded={() => setShowVideo(false)}>
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </Video>
-            ))}
-        </VideoWrapper>
-      )}
-    </Container>
-  );
-};
-
-export default Detail;
+export default SeriesDetail;

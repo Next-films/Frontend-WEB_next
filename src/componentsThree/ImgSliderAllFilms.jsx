@@ -83,25 +83,25 @@ const ImgSliderAllFilm = (props) => {
     <Carousel {...settings}>
       <Wrap>
         <a>
-          <img src="https://singleton-website.ru/default/images/slider-badging.jpg" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/slider-badging.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="https://singleton-website.ru/default/images/slider-badag.jpg" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/slider-badag.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="https://singleton-website.ru/default/images/slider-scale.jpg" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/slider-scale.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="https://singleton-website.ru/default/images/slider-badag.jpg" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/slider-badag.jpg" alt="" />
         </a>
       </Wrap>
     </Carousel>

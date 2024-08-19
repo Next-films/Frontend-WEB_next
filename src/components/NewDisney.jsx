@@ -44,10 +44,10 @@ const NewDisney = () => {
             onTouchStart={handleMobileTouchStart}
             onTouchEnd={handleMobileTouchEnd}
           >
-            <img src="https://singleton-website.ru/default/images/AllSeries.png" alt="" />
+            <img src="http://5.144.98.17:8080/d1/default/images/AllSeries.png" alt="" />
             <VideoWrapper isVisible={isHovered || isVideoPlaying}>
               <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-                <source src="https://singleton-website.ru/default/video/AllSeries.mp4" type="video/mp4" />
+                <source src="http://5.144.98.17:8080/d1/default/video/AllSeries.mp4" type="video/mp4" />
               </video>
             </VideoWrapper>
           </Wrap>
