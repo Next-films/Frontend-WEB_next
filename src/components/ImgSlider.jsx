@@ -82,27 +82,19 @@ const ImgSlider = (props) => {
     <Carousel {...settings}>
       <Wrap>
         <a>
-          <img src="http://5.144.98.17:8080/d1/default/images/slider-badging.jpg" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/banner2.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="http://5.144.98.17:8080/d1/default/images/slider-scale.jpg" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/banner.webp" alt="" />
         </a>
       </Wrap>
 
-      <Wrap>
-        <a>
-          <img src="http://5.144.98.17:8080/d1/default/images/slider-badag.jpg" alt="" />
-        </a>
-      </Wrap>
 
-      <Wrap>
-        <a>
-          <img src="http://5.144.98.17:8080/d1/default/images/slider-scales.jpg" alt="" />
-        </a>
-      </Wrap>
+
+     
     </Carousel>
   );
 };

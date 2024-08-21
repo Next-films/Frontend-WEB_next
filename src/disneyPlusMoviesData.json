@@ -1,43 +1,46 @@
 [ 
     {
-        "id": "GreenMile",
-        "backgroundImg": "http://5.144.98.17:8080/d1/films/GreenMile/trailer.gif",
-        "cardImg": "http://5.144.98.17:8080/d1/films/GreenMile/poster.jpeg",
-        "description": "Обвиненный в страшном преступлении, Джон Коффи оказывается в блоке смертников тюрьмы «Холодная гора». Вновь прибывший обладал поразительным ростом и был пугающе спокоен, что, впрочем, никак не влияло на отношение к нему начальника блока Пола Эджкомба, привыкшего исполнять приговор.",
-        "subTitle": "1999 • 3h 09m • Драму, Криминал, Фэнтези",
-        "title": "Зелёная миля",
-        "titleImg": "http://5.144.98.17:8080/d1/films/GreenMile/logo.png",
-        "type": "recommend",
-        "films": "http://5.144.98.17:8080/d1/default/video/1564674844-disney.mp4",
-        "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-        "name": "Зелёная миля, зеленая миля",
-        "date": "18/04/2000"
+       "id": "Dzhentelmeny",
+   "backgroundImg": "http://5.144.98.17:8080/d1/films/Dzhentelmeny/trailer.mp4",
+   "cardImg": "http://5.144.98.17:8080/d1/films/Dzhentelmeny/poster.png",
+   "description": "Талантливый выпускник Оксфорда, применив свой уникальный ум и невиданную дерзость, придумал нелегальную схему обогащения с использованием поместья обедневшей английской аристократии. Однако когда он решает продать свой бизнес влиятельному клану миллиардеров из США, на его пути встают не менее обаятельные, но жесткие джентльмены. Намечается обмен любезностями, который точно не обойдется без перестрелок и парочки несчастных случаев.",
+   "subTitle": "2019 г. ‧ Криминал/Боевик ‧ 1 ч 53 мин",
+   "title": "Джентльмены",
+   "titleImg": "http://5.144.98.17:8080/d1/films/Dzhentelmeny/logo.webp",
+   "type": "recommend",
+   "films": "http://5.144.98.17:8080/d1/films/Dzhentelmeny/dzhentlmeny.mp4",
+   "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+   "name": "Джентльмены, джентльмены",
+   "date": "03/12/2020", 
+   "filtr": ["Криминал", "Боевик"] 
      },{
-      "id": "DjangoUnchained2012",
-      "backgroundImg": "http://5.144.98.17:8080/d1/films/DjangoUnchained2012/trailer.gif",
-      "cardImg": "http://5.144.98.17:8080/d1/films/DjangoUnchained2012/poster.jpg",
-      "description": "Эксцентричный охотник за головами, также известный как «Дантист», промышляет отстрелом самых опасных преступников на Диком Западе. Работенка пыльная, и без надежного помощника ему не обойтись. Но как найти такого и желательно не очень дорогого? Беглый раб по имени Джанго — прекрасная кандидатура. Правда, у нового помощника свои мотивы — кое с чем надо разобраться.",
-      "subTitle": "2012 г. ‧ Вестерн/Боевик ‧ 2 ч 45 мин",
-      "title": "Джанго освобождённый",
-      "titleImg": "http://5.144.98.17:8080/d1/films/DjangoUnchained2012/logo.png",
+      "id": "Matrix1",
+      "backgroundImg": "http://5.144.98.17:8080/d1/films/Matrix1/trailer.mp4",
+      "cardImg": "http://5.144.98.17:8080/d1/films/Matrix1/poster.jpg",
+      "description": "Мир Матрицы — это иллюзия, существующая только в бесконечном сне обреченного человечества. Холодный мир будущего, в котором люди — всего лишь батарейки в компьютерных системах",
+      "subTitle": "2001 г. ‧ Боевик/Фантастика ‧ 1 ч 56 мин",
+      "title": "Матрица",
+      "titleImg": "http://5.144.98.17:8080/d1/films/Matrix1/logo.png",
       "type": "recommend",
-      "films": "../public/videos/1564674844-disney.mp4",
+      "films": "http://5.144.98.17:8080/d1/films/Matrix1/Matrix1.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-      "name": "Джанго освобождённый, джанго освобождённый",
-      "date": "17/11/2013"
+      "name": "Матрица, матрица",
+      "date": "14/10/1999", 
+      "filtr": ["Боевик", "Фантастика"] 
    },{
-      "id": "TheGodfather1974",
-      "backgroundImg": "http://5.144.98.17:8080/d1/films/TheGodfather1974/trailer.gif",
-      "cardImg": "http://5.144.98.17:8080/d1/films/TheGodfather1974/poster.jpeg",
-      "description": "Криминальная сага, повествующая о нью-йоркской сицилийской мафиозной семье Корлеоне. Фильм охватывает период 1945-1955 годов.Глава семьи, Дон Вито Корлеоне, выдаёт замуж свою дочь. В это время со Второй мировой войны возвращается его любимый сын Майкл. Майкл, герой войны, гордость семьи, не выражает желания заняться жестоким семейным бизнесом.",
-      "subTitle": "1972 г. ‧ Криминал ‧ 2 ч 55 мин",
-      "title": "Крёстный отец",
-      "titleImg": "http://5.144.98.17:8080/d1/films/TheGodfather1974/logoNew.png",
+      "id": "Dedpool3",
+      "backgroundImg": "http://5.144.98.17:8080/d1/films/Dedpool3/trailer.gif",
+      "cardImg": "http://5.144.98.17:8080/d1/films/Dedpool3/poster.jpg",
+      "description": "Блогер использует уникальный гаджет, чтобы отомстить за смерть сестры. Сай-фай-триллер с Джошем Хатчерсоном.",
+      "subTitle": "2023 г. ‧ Триллер/Научная фантастика ‧ 1 ч 39 мин",
+      "title": "57 секунд",
+      "titleImg": "http://5.144.98.17:8080/d1/films/Dedpool3/logo.png",
       "type": "recommend",
-      "films": "../public/videos/1564674844-disney.mp4",
+      "films": "http://5.144.98.17:8080/d1/films/Dedpool3/Дедпул и Росомаха (2024) ⧸ Deadpool&Wolverine ⧸ TS-SOFCJ.mp4",
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
-      "name": "Крёстный отец, крёстный отец, крестный отец, Крестный отец",
-      "date": "14/03/1973"
+      "name": "57 секунд",
+      "date": "25/07/2024", 
+      "filtr": ["Триллер", "Фантастика"]
    },{
       "id": "Spider-ManAcrossTheSpider-Verse",
       "backgroundImg": "http://5.144.98.17:8080/d1/cartoons/Spider-ManAcrossTheSpider-Verse/trailer.mp4",
@@ -51,6 +54,101 @@
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "Кунг-Фу Панда,кунг-фу панда, кунгфу, Кунгфу, кунг, Кунг",
       "date": "15/05/2008"
-   }
+   },
+    {
+      "id": "TheBoys4",
+      "backgroundImg": "http://5.144.98.17:8080/d1/serials/TheBoys4/trailer.gif",
+      "cardImg": "http://5.144.98.17:8080/d1/serials/TheBoys4/poster.jpg",
+      "description": "Майлз Моралес отправляется в приключение по мультивселенной...",
+      "subTitle": "2023 г. ‧ Боевик/Комедия ‧ 2 ч 20 мин",
+      "title": "Человек-паук: Паутина вселенных",
+      "titleImg": "http://5.144.98.17:8080/d1/serials/TheBoys4/logo.png",
+      "type": "new",
+      "films": [
+        {
+          "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 1 серия ⧸ The Boys Кубик в Кубе.mp4",
+          "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod1.png"
+        },
+        {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 2 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod2.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 3 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod3.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 4 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod4.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 5 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod5.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 6 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod6.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 7 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod7.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 8 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod8.png"
+       }
+      ],
+      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+      "name": "Человек-паук: Паутина вселенных...",
+      "date": "12/05/2023",
+      "filtr": ["Приключения", "Комедия", "Криминал"]
+    },{
+      "id": "TheBoys3",
+      "backgroundImg": "http://5.144.98.17:8080/d1/serials/TheBoys3/trailer.gif",
+      "cardImg": "http://5.144.98.17:8080/d1/serials/TheBoys3/poster.jpeg",
+      "description": "Майлз Моралес отправляется в приключение по мультивселенной...",
+      "subTitle": "2023 г. ‧ Боевик/Комедия ‧ 2 ч 20 мин",
+      "title": "Человек-паук: Паутина вселенных",
+      "titleImg": "http://5.144.98.17:8080/d1/serials/TheBoys4/logo.png",
+      "type": "new",
+      "films": [
+        {
+          "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 1 серия смотреть бесплатно.mp4",
+          "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod1.png"
+        },
+        {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 2 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod2.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 3 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod3.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 4 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod4.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 5 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod5.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 6 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod6.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 7 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod7.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 8 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod8.png"
+       }
+      ],
+      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+      "name": "Человек-паук: Паутина вселенных...",
+      "date": "12/05/2023",
+      "filtr": ["Приключения", "Комедия", "Криминал"]
+    }
 
 ]

@@ -25,13 +25,13 @@ const NewDisney = () => {
 
   return (
     <Container>
-      <h4>Series</h4>
+      <h4>Serials</h4>
       <Content>
         {movies &&
           movies.map((movie, key) => (
             <Wrap key={key}>
               {movie.id}
-              <Link to={`/detail/` + movie.id}>
+              <Link to={`/detailseries/` + movie.id}>
                 <img src={movie.cardImg} alt={movie.title} />
               </Link>
             </Wrap>
@@ -44,10 +44,10 @@ const NewDisney = () => {
             onTouchStart={handleMobileTouchStart}
             onTouchEnd={handleMobileTouchEnd}
           >
-            <img src="http://5.144.98.17:8080/d1/default/images/AllSeries.png" alt="" />
+            <img src="http://5.144.98.17:8080/d1/default/images/allserialslogo.png" alt="" />
             <VideoWrapper isVisible={isHovered || isVideoPlaying}>
               <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-                <source src="http://5.144.98.17:8080/d1/default/video/AllSeries.mp4" type="video/mp4" />
+                <source src="http://5.144.98.17:8080/d1/default/videos/allserials.mp4" type="video/mp4" />
               </video>
             </VideoWrapper>
           </Wrap>

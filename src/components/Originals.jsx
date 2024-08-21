@@ -44,10 +44,10 @@ const Originals = () => {
             onTouchStart={handleMobileTouchStart}
             onTouchEnd={handleMobileTouchEnd}
           >
-            <img src="http://5.144.98.17:8080/d1/default/images/AllCartoons.png" alt="" />
+            <img src="http://5.144.98.17:8080/d1/default/images/allcartoonslogo.png" alt="" />
             <VideoWrapper isVisible={isHovered || isVideoPlaying}>
               <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-                <source src="http://5.144.98.17:8080/d1/default/video/AllCartoons.mp4" type="video/mp4" />
+                <source src="http://5.144.98.17:8080/d1/default/videos/allcartoons.mp4" type="video/mp4" />
               </video>
             </VideoWrapper>
           </Wrap>

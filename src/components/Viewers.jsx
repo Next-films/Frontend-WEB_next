@@ -10,7 +10,7 @@ const Viewers = (props) => {
           <img src="http://5.144.98.17:8080/d1/default/images/viewers-disney.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="http://5.144.98.17:8080/d1/default/video/1564674844-disney.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/videos/default-disney.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
@@ -20,7 +20,7 @@ const Viewers = (props) => {
           <img src="http://5.144.98.17:8080/d1/default/images/viewers-pixar.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="http://5.144.98.17:8080/d1/default/video/1564676714-pixar.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/videos/default-pixar.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
@@ -30,7 +30,7 @@ const Viewers = (props) => {
           <img src="http://5.144.98.17:8080/d1/default/images/viewers-marvel.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="http://5.144.98.17:8080/d1/default/video/1564676115-marvel.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/videos/default-marvel.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
@@ -40,21 +40,22 @@ const Viewers = (props) => {
           <img src="http://5.144.98.17:8080/d1/default/images/viewers-starwars.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="http://5.144.98.17:8080/d1/default/video/1608229455-star-wars.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/videos/default-star-wars.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
       </Link>
       <Link to="/allseries">
         <Wrap>
-          <img src="http://5.144.98.17:8080/d1/default/images/dc.png" alt="" />
+          <img src="http://5.144.98.17:8080/d1/default/images/dclogo.png" alt="" />
           <VideoWrapper>
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src="http://5.144.98.17:8080/d1/default/video/dcintro.mp4" type="video/mp4" />
+              <source src="http://5.144.98.17:8080/d1/default/videos/dc.mp4" type="video/mp4" />
             </video>
           </VideoWrapper>
         </Wrap>
       </Link>
+      
     </Container>
   );
 };

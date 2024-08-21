@@ -126,6 +126,20 @@
    "date": "29/09/2023", 
    "filtr": ["Триллер", "Фантастика"]
 },{
+   "id": "Dedpool3",
+   "backgroundImg": "http://5.144.98.17:8080/d1/films/Dedpool3/trailer.gif",
+   "cardImg": "http://5.144.98.17:8080/d1/films/Dedpool3/poster.jpg",
+   "description": "Блогер использует уникальный гаджет, чтобы отомстить за смерть сестры. Сай-фай-триллер с Джошем Хатчерсоном.",
+   "subTitle": "2023 г. ‧ Триллер/Научная фантастика ‧ 1 ч 39 мин",
+   "title": "57 секунд",
+   "titleImg": "http://5.144.98.17:8080/d1/films/Dedpool3/logo.png",
+   "type": "films",
+   "films": "http://5.144.98.17:8080/d1/films/57second/Дедпул и Росомаха (2024) ⧸ Deadpool&Wolverine ⧸ TS-SOFCJ.mp4",
+   "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+   "name": "57 секунд",
+   "date": "25/07/2024", 
+   "filtr": ["Триллер", "Фантастика"]
+},{
    "id": "1+1",
    "backgroundImg": "http://5.144.98.17:8080/d1/films/1+1/trailer.mp4",
    "cardImg": "http://5.144.98.17:8080/d1/films/1+1/poster.png",
@@ -450,32 +464,90 @@
       "type": "series",
       "films": [
         {
-          "videoUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/OstrovProclytih.mp4",
-          "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/poster.jpg"
+          "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 1 серия ⧸ The Boys Кубик в Кубе.mp4",
+          "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod1.png"
         },
         {
-          "videoUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/OstrovProclytih.mp4",
-          "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/poster.jpg"
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 2 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod2.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 3 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod3.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 4 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod4.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 5 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod5.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 6 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod6.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 7 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod7.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/Сериал Пацаны 4 сезон 8 серия ⧸ The Boys Кубик в Кубе.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys4/episod8.png"
+       }
+      ],
+      "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
+      "name": "Человек-паук: Паутина вселенных...",
+      "date": "12/05/2023",
+      "filtr": ["Приключения", "Комедия", "Криминал"]
+    },
+    {
+      "id": "TheBoys3",
+      "backgroundImg": "http://5.144.98.17:8080/d1/serials/TheBoys3/trailer.gif",
+      "cardImg": "http://5.144.98.17:8080/d1/serials/TheBoys3/poster.jpeg",
+      "description": "Майлз Моралес отправляется в приключение по мультивселенной...",
+      "subTitle": "2023 г. ‧ Боевик/Комедия ‧ 2 ч 20 мин",
+      "title": "Человек-паук: Паутина вселенных",
+      "titleImg": "http://5.144.98.17:8080/d1/serials/TheBoys4/logo.png",
+      "type": "series",
+      "films": [
+        {
+          "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 1 серия смотреть бесплатно.mp4",
+          "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod1.png"
         },
         {
-          "videoUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/OstrovProclytih.mp4",
-          "previewUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/preview3.jpg"
-        },
-        {
-          "videoUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/OstrovProclytih.mp4",
-          "previewUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/preview4.jpg"
-        },
-        {
-          "videoUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/OstrovProclytih.mp4",
-          "previewUrl": "http://5.144.98.17:8080/d1/films/OstrovProclytih/preview5.jpg"
-        }
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 2 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod2.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 3 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod3.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 4 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod4.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 5 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod5.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 6 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod6.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 7 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod7.png"
+       },
+       {
+         "videoUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/Пацаны 3 сезон, 8 серия смотреть бесплатно.mp4",
+         "previewUrl": "http://5.144.98.17:8080/d1/serials/TheBoys3/episod8.png"
+       }
       ],
       "trailer": "https://www.youtube.com/watch?v=XaGjd5paQ4M",
       "name": "Человек-паук: Паутина вселенных...",
       "date": "12/05/2023",
       "filtr": ["Приключения", "Комедия", "Криминал"]
     }
-    
-    
     
 ]

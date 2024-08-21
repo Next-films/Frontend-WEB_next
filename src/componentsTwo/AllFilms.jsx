@@ -1,13 +1,11 @@
 import styled from "styled-components";
-import ImgSlider from "./ImgSliderAllFilms";
+import ImgSlider from "../components/ImgSlider";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setMovies } from "../features/movie/movieSlice";
 
 
 import disneyAllFilms from '../All.json'
-import disneyAllSeries from '../All.json'
-import disneyAllCartoons from '../All.json'
 import ListAllFilm from "./ListAllFilm";
 
 
