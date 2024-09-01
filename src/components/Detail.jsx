@@ -36,7 +36,11 @@ const Detail = () => {
   const handlePlay = () => {
     if (!videoPlayed) {
       setVideoPlayed(true);
-      videoRef.current.play();
+      if (detailData.films.includes('t.me')) {
+        window.open(detailData.films, '_blank');
+      } else {
+        videoRef.current.play();
+      }
     } else {
       if (collapsed) {
         setCollapsed(false);
@@ -60,7 +64,13 @@ const Detail = () => {
     window.open(detailData.trailer, '_blank');
   };
 
-  const buttonText = collapsed ? (videoPlayed ? `Продолжить просмотр (${formatTime(currentTime)})` : "Play") : (videoPlayed ? "Play" : "Play");
+  const buttonText = collapsed
+    ? videoPlayed
+      ? `Продолжить просмотр (${formatTime(currentTime)})`
+      : 'Play'
+    : videoPlayed
+    ? 'Play'
+    : 'Play';
 
   const handleClose = () => {
     if (videoPlayed) {
@@ -101,7 +111,7 @@ const Detail = () => {
           </GroupWatch>
         </Controls>
         <SubTitle>{detailData.subTitle}</SubTitle>
-        {videoPlayed && (
+        {videoPlayed && !detailData.films.includes('t.me') && (
           <>
             <VideoFrame>
               <video
